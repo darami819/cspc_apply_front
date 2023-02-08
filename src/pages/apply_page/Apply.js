@@ -2,9 +2,9 @@ import React from 'react';
 
 const Apply = () => {
     return(
-        <>
-            apply
-        </>
+        <div>
+            <h1>apply</h1>
+        </div>
     );
 };
 
