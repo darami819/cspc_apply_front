@@ -5,8 +5,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
+import { Outlet } from 'react-router-dom';
+
 const Banner = () => {
     return(
+      <>
         <Navbar fixed="top" bg="light" varient="dark" expand="md">
         <Container>
           <Navbar.Brand href="/">CSPC</Navbar.Brand>
@@ -15,24 +18,24 @@ const Banner = () => {
             <Nav className="me-auto">
       
             <NavDropdown title="DOING" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/Mt">MT</NavDropdown.Item>
-                <NavDropdown.Item href="/Picnic">
+                <NavDropdown.Item href="/mt">MT</NavDropdown.Item>
+                <NavDropdown.Item href="/picnic">
                   소풍
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/Study">STUDY</NavDropdown.Item>
-                <NavDropdown.Item href="/Senior">사람들</NavDropdown.Item>
-                <NavDropdown.Item href="/Party">Christmas Party</NavDropdown.Item>
-                <NavDropdown.Item href="/StaffDinner">회식</NavDropdown.Item>
-                <NavDropdown.Item href="/Work">업무</NavDropdown.Item>
+                <NavDropdown.Item href="/study">STUDY</NavDropdown.Item>
+                <NavDropdown.Item href="/senior">사람들</NavDropdown.Item>
+                <NavDropdown.Item href="/party">Christmas Party</NavDropdown.Item>
+                <NavDropdown.Item href="/staffDinner">회식</NavDropdown.Item>
+                <NavDropdown.Item href="/work">업무</NavDropdown.Item>
               </NavDropdown>
       
               <NavDropdown title="지원하기" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/Apply">지원서 작성</NavDropdown.Item>
-                <NavDropdown.Item href="/Modify">
+                <NavDropdown.Item href="/apply">지원서 작성</NavDropdown.Item>
+                <NavDropdown.Item href="/modify">
                   지원서 수정
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="/Result">
+                <NavDropdown.Item href="/result">
                   결과 확인
                 </NavDropdown.Item>
               </NavDropdown>
@@ -50,6 +53,10 @@ const Banner = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      <div>
+        <Outlet/>
+      </div>
+      </>
       );
 };
 

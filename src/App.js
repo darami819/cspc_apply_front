@@ -18,22 +18,22 @@ import Study from './pages/doing_page/Study';
 import Work from './pages/doing_page/Work';
 
 const App = () => {
-  return(
-      <Routes>
-        <Route element={<Banner />}>
-          <Route path="/" element={<Main />} />
-          <Route path="apply" element={<Apply /> } />
-          <Route path="modify" element={<Modify /> } />
-          <Route path="result" element={<Result /> } />
-          <Route path="Mt" element={<Mt /> } />
-          <Route path="Party" element={<Party /> } />
-          <Route path="Picnic" element={<Picnic /> } />
-          <Route path="Senior" element={<Senior /> } />
-          <Route path="StaffDinner" element={<StaffDinner /> } />
-          <Route path="Study" element={<Study /> } />
-          <Route path="Work" element={<Work /> } />
-          </Route>
-      </Routes>
+  return (
+    <Routes>
+      <Route element={<Banner />}>
+        <Route path="/" element={<Main />} />
+        <Route path="/apply" element={<Apply />} />
+        <Route path="modify" element={<Modify />} />
+        <Route path="result" element={<Result />} />
+        <Route path="mt" element={<Mt />} />
+        <Route path="party" element={<Party />} />
+        <Route path="picnic" element={<Picnic />} />
+        <Route path="senior" element={<Senior />} />
+        <Route path="staffDinner" element={<StaffDinner />} />
+        <Route path="study" element={<Study />} />
+        <Route path="work" element={<Work />} />
+      </Route>
+    </Routes>
   );
 };
 
