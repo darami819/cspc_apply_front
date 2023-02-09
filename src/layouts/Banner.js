@@ -10,11 +10,7 @@ import { Outlet } from 'react-router-dom';
 const Banner = () => {
     return(
       <>
-<<<<<<< HEAD
         <Navbar sticky="top" bg="light" varient="dark" expand="md">
-=======
-        <Navbar fixed="top" bg="light" varient="dark" expand="md">
->>>>>>> f46ff5b2f44dcf5747e5a37a0ed092536dfd0841
         <Container>
           <Navbar.Brand href="/">CSPC</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -58,11 +54,7 @@ const Banner = () => {
         </Container>
       </Navbar>
       <div>
-<<<<<<< HEAD
         <Outlet />
-=======
-        <Outlet/>
->>>>>>> f46ff5b2f44dcf5747e5a37a0ed092536dfd0841
       </div>
       </>
       );

@@ -2,12 +2,9 @@ import React from 'react';
 
 const Main = () => {
     return(
-        <div>
-            <br/>
-            <br/>
-            <br/>
-            <h1>main</h1>
-        </div>
+        <>
+            main
+        </>
     );
 }
 
