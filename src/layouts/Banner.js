@@ -12,7 +12,7 @@ const Banner = () => {
       <>
         <Navbar sticky="top" bg="light" varient="dark" expand="md">
         <Container>
-          <Navbar.Brand href="/">CSPC</Navbar.Brand>
+          <Navbar.Brand href="/"><img src="img/임시.png" alt="logo" width={50}/></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">

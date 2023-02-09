@@ -23,15 +23,15 @@ const App = () => {
       <Route element={<Banner />}>
         <Route path="/" element={<Main />} />
         <Route path="/apply" element={<Apply />} />
-        <Route path="modify" element={<Modify />} />
-        <Route path="result" element={<Result />} />
-        <Route path="mt" element={<Mt />} />
-        <Route path="party" element={<Party />} />
-        <Route path="picnic" element={<Picnic />} />
-        <Route path="senior" element={<Senior />} />
-        <Route path="staffDinner" element={<StaffDinner />} />
-        <Route path="study" element={<Study />} />
-        <Route path="work" element={<Work />} />
+        <Route path="/modify" element={<Modify />} />
+        <Route path="/result" element={<Result />} />
+        <Route path="/mt" element={<Mt />} />
+        <Route path="/party" element={<Party />} />
+        <Route path="/picnic" element={<Picnic />} />
+        <Route path="/senior" element={<Senior />} />
+        <Route path="/staffDinner" element={<StaffDinner />} />
+        <Route path="/study" element={<Study />} />
+        <Route path="/work" element={<Work />} />
       </Route>
     </Routes>
   );
