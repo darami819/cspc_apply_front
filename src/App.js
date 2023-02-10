@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // layouts
-import Banner from './layouts/Banner';
+import MainLayout from './layouts/MainLayout';
 import FlyingButton from './layouts/FlyingButton';
 
 // pages
@@ -23,7 +23,7 @@ import Work from './pages/doing_page/Work';
 const App = () => {
   return (
     <Routes>
-      <Route element={<Banner />}>
+      <Route element={<MainLayout />}>
         <Route element={<FlyingButton />}>
           <Route path="/" element={<Main />} />
           <Route path="/mt" element={<Mt />} />
