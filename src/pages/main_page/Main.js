@@ -9,6 +9,7 @@ import ImgMain from './ImgMain';
 import IntroduceMain from './IntroduceMain';
 import WeDo from './WeDo';
 import AlsoDo from './AlsoDo';
+import MoreStory from './MoreStory';
 
 
 const Main = () => {
@@ -38,6 +39,7 @@ const Main = () => {
             <IntroduceMain />
             <WeDo />
             <AlsoDo />
+            <MoreStory />
         </>
     );
 }

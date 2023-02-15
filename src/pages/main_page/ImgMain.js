@@ -4,9 +4,6 @@ import imgMain from './background_main.png';
 // styles
 import './Main.css';
 
-// components
-import ButtonMain from './ButtonMain';
-
 const ImgMain = () => {
     return (
 
@@ -26,7 +23,14 @@ const ImgMain = () => {
             >
                 2023 1학기 신입 부원 모집
             </div>
-            <ButtonMain />
+            <button
+                className="ButtonStyle"
+                style={{
+                    top: '521px',
+                }}
+            >
+                지원하기
+            </button>
         </div>
     );
 };

@@ -54,3 +54,14 @@
     justify-content: space-between;
     align-items: flex-end;
 }
+
+.AlsoDoStyle {
+    width: 693px;
+    height: 328px;
+
+    margin: 40px;
+
+    background: #d9d9d9;
+
+    border-radius: 10px;
+}
