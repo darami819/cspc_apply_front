@@ -17,7 +17,6 @@ const MoreStory = () => {
                 className="ButtonStyle"
                 style={{
                     bottom: '216px',
-                    background: '#d9d9d9',
                     position: 'relative',
                 }}
             >
