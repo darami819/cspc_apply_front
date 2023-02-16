@@ -2,23 +2,15 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Figure from 'react-bootstrap/Figure';
+import './Introduce.css';
 
 const Introduce = () => {
   return (
     <>
-    <Navbar bg="secondary" variant="light" expand="md">
-        <br/>
-        <br/>
-        <br/>
-        <Navbar.Brand href="/introduce">소개</Navbar.Brand>
-        <br/>
-        <br/>
-        <br/>
+    <Navbar className="introducebanner" expand="md">
+        <Navbar.Brand href="/introduce" id="introduceletter">소개</Navbar.Brand>      
       </Navbar>
-      <br/>
-      <br/>
-      <br/>
-      <hr width="75%" />
+
 
       <Figure>
       <Figure.Image

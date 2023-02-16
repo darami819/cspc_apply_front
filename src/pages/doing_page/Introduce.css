@@ -1,0 +1,26 @@
+.introducebanner{
+    position: absolute;
+    width: 1920px;
+    height: 173px;
+    left: 0px;
+    top: 0px;
+    background: #000000;
+}
+
+#introduceletter{
+margin-left: 310px;
+margin-top: 149px;
+margin-bottom: 71px;
+font-family: 'IBMPlexSans-Regular';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 31px;
+
+color: #FFFFFF;
+}
+
+@font-face {
+    font-family: 'IBMPlexSans-Regular';
+    src: url('./fonts/IBMPlexSans-Regular.ttf');
+}
