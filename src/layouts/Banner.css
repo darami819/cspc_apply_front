@@ -1,0 +1,55 @@
+.banner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 310px;
+    gap: 80px;
+    
+    position: absolute;
+    width: 1920px;
+    height: 75px;
+    left: calc(50% - 1920px/2);
+    top: 0px;
+    
+    background: #FFFFFF;
+}
+
+#bannerbrand{
+    width: 65px;
+    height: 26px;
+    left: 310px;
+    font-family: 'Heavitas';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 22px;
+    display: flex;
+    align-items: flex-end;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#bannerletter{
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    font-family: 'IBMPlexSans-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+}
+
+@font-face {
+    font-family: 'IBMPlexSans-Regular';
+    src: url('./fonts/IBMPlexSans-Regular.ttf');
+  }
+
+@font-face {
+    font-family: 'Heavitas';
+    src: url('./fonts/Heavitas.ttf');
+}
