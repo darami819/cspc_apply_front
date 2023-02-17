@@ -1,0 +1,102 @@
+.main {
+    font-family: 'IBMPlexSans-Regular';
+    text-align: center;
+    font-style: normal;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+}
+
+@font-face {
+    font-family: 'IBMPlexSans-Regular';
+    src: url('./fonts/IBMPlexSans-Regular.ttf');
+}
+
+
+.ImgMainStyle {
+    position: relative;
+    width: 1920px;
+    height: 1005px;
+}
+
+.letterStyle_1 {
+    position: absolute;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.letterStyle_2{
+    position: absolute;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.letterStyle_3{
+    position: absolute;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+}
+
+.letterStyle_4{
+    position: absolute;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+
+.ButtonStyle {
+    position: absolute;
+
+    width: 193px;
+    height: 49px;
+
+    background: #55a9be;
+    border-radius: 194.5px;
+    border: #55a9be;
+
+    font-size: 20px;
+
+    /* 그림자 */
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+.ButtonStyle:hover {
+    background: #696969;
+}
+
+.WeDoStyle {
+    width: 375px;
+    height: 258px;
+    display:inherit;
+
+    margin: 50px;
+
+    background: #d9d9d9;
+    border-radius: 10px;
+
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.AlsoDoStyle {
+    width: 693px;
+    height: 328px;
+
+    margin: 40px;
+
+    background: #d9d9d9;
+
+    border-radius: 10px;
+}

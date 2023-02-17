@@ -5,11 +5,11 @@ import Card from 'react-bootstrap/Card';
 import MakeCards from '../../layouts/MakeCards';
 
 // components
-import ImgMain from './ImgMain';
-import IntroduceMain from './IntroduceMain';
-import WeDo from './WeDo';
-import AlsoDo from './AlsoDo';
-import MoreStory from './MoreStory';
+import ImgMain from './ImgMain/ImgMain';
+import IntroduceMain from './components/IntroduceMain';
+import WeDo from './components/WeDo';
+import AlsoDo from './components/AlsoDo';
+import MoreStory from './components/MoreStory';
 
 
 const Main = () => {
