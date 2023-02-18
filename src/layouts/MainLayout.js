@@ -8,7 +8,7 @@ const MainLayout = () => {
         <>
             <Banner/>
             <Outlet/>
-            <Footer/>
+            
         </>
     );
 };

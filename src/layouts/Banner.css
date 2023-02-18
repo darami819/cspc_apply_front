@@ -46,10 +46,10 @@
 
 @font-face {
     font-family: 'IBMPlexSans-Regular';
-    src: url('./fonts/IBMPlexSans-Regular.ttf');
+    src: url('../../src/fonts/IBMPlexSans-Regular.ttf');
   }
 
 @font-face {
     font-family: 'Heavitas';
-    src: url('./fonts/Heavitas.ttf');
+    src: url('../../src/fonts/Heavitas.ttf');
 }

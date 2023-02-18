@@ -7,8 +7,9 @@ import Container from 'react-bootstrap/Container';
 const Footer = () => {
     return(
         <>
+        
         <hr size="5" noshade />
-        <Navbar bg="white" variant="light" expand="md">     
+        <Navbar bg="white" variant="light" expand="md" className="footer">     
         <Container>
         <Nav className="justify-content-start" activeKey="/home">
         <Nav.Item>
