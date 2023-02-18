@@ -10,8 +10,6 @@ const Banner = () => {
       <>
         <Navbar sticky="top" varient="light" bg="white" expand="md">
         <Container>
-          
-         
           <Nav className="banner">
           <Navbar.Brand href="/" id='bannerbrand'>CSPC</Navbar.Brand>
             <Nav.Item>
@@ -23,8 +21,7 @@ const Banner = () => {
             <Nav.Item>
             <Nav.Link href="/apply" id='bannerletter'>지원하기</Nav.Link>
             </Nav.Item>   
-          </Nav>
-         
+          </Nav>     
           </Container>
           </Navbar>
       </>

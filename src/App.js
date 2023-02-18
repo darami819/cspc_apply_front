@@ -25,7 +25,6 @@ const App = () => {
   return (
     <Routes>
       <Route element={<MainLayout />}>
-        <Route element={<FlyingButton />}>
           <Route path="/" element={<Main />} />
           <Route path="/mt" element={<Mt />} />
           <Route path="/party" element={<Party />} />
@@ -36,7 +35,6 @@ const App = () => {
           <Route path="/work" element={<Work />} />
           {/* 추가된 부분 */}
           <Route path="/introduce" element={<Introduce />} />
-        </Route>
         <Route path="/apply" element={<Apply />} />
         <Route path="/modify" element={<Modify />} />
         <Route path="/result" element={<Result />} />
