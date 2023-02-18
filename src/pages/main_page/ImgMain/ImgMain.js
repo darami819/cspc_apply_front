@@ -5,7 +5,7 @@ import ImgMain_2 from './ImgMain_2';
 import ImgMain_3 from './ImgMain_3';
 
 // styles
-import '../components/Main.css';
+import '../Main.css';
 
 const ImgMain = () => {
     return (

@@ -6,10 +6,9 @@ import MakeCards from '../../layouts/MakeCards';
 
 // components
 import ImgMain from './ImgMain/ImgMain';
-import IntroduceMain from './components/IntroduceMain';
-import WeDo from './components/WeDo';
-import AlsoDo from './components/AlsoDo';
-import MoreStory from './components/MoreStory';
+import IntroduceMain from './IntroduceMain';
+import MoreStory from './MoreStory';
+import MainApplyCard from './MainApplyCard';
 
 
 const Main = () => {
@@ -37,9 +36,8 @@ const Main = () => {
         <>
             <ImgMain />
             <IntroduceMain />
-            <WeDo />
-            <AlsoDo />
             <MoreStory />
+            <MainApplyCard />
         </>
     );
 }

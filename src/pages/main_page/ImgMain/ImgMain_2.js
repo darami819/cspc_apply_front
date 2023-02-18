@@ -2,7 +2,7 @@ import React from 'react';
 
 import img_2 from '../components/img/main_img_2.png';
 
-import '../components/Main.css';
+import '../Main.css';
 
 const ImgMain_2 = () => {
     return (
