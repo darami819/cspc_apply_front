@@ -9,6 +9,7 @@ import ImgMain from './ImgMain/ImgMain';
 import IntroduceMain from './IntroduceMain';
 import MoreStory from './MoreStory';
 import MainApplyCard from './MainApplyCard';
+import MainBlank from './MainBlank';
 
 
 const Main = () => {
@@ -38,6 +39,7 @@ const Main = () => {
             <IntroduceMain />
             <MoreStory />
             <MainApplyCard />
+            <MainBlank />
         </>
     );
 }

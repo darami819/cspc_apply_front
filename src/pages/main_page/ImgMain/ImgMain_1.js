@@ -2,6 +2,8 @@ import React from 'react';
 
 import img_1 from '../components/img/main_img_1.png';
 
+import GoToApply from '../components/GoToApply';
+
 import '../Main.css';
 
 const ImgMain_1 = () => {
@@ -19,14 +21,9 @@ const ImgMain_1 = () => {
             >
                 2023 1학기 신입 부원 모집
             </div>
-            <button
-                className="ButtonStyle"
-                style={{
-                    top: '866px',
-                }}
-            >
-                    지원하기
-            </button>
+            <GoToApply
+                top='866px'
+            />
         </div>
     );
 };

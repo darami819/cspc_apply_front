@@ -2,7 +2,10 @@ import React from 'react';
 
 import img_3 from '../components/img/main_img_3.png';
 
+import '../components/GoToApply';
+
 import '../Main.css';
+import GoToApply from '../components/GoToApply';
 
 const ImgMain_3 = () => {
     return (
@@ -83,15 +86,10 @@ const ImgMain_3 = () => {
                         언제든 물어볼 수 있는 선배가 있어 든든합니다.
                     </div>
                 </div>
-                <button
-                    className="ButtonStyle"
-                    style={{
-                        left: '1450px',
-                        top: '876px',
-                    }}
-                >
-                    지원하기
-                </button>
+                <GoToApply
+                    left='1450px'
+                    top='876px'
+                />
             </div>
         </div>
     );

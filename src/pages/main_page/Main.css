@@ -1,4 +1,6 @@
 .main {
+    position: relative;
+
     font-family: 'IBMPlexSans-Regular';
     text-align: center;
     font-style: normal;
@@ -74,8 +76,6 @@
 
 
 .ButtonStyle {
-    position: absolute;
-
     width: 193px;
     height: 49px;
 
@@ -126,6 +126,8 @@
 }
 
 .ImgIntroduceStyle{
-    width: 100%;
+
     height: 356px;
+    
+    border-radius: 10px;
 }
