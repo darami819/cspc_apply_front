@@ -1,11 +1,29 @@
 import React from 'react';
+import './Footer.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import Container from 'react-bootstrap/Container';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const Footer = () => {
     return(
+      <Container fluid="md">
+        <Row>
+        <Col><div className='lined'></div></Col>
+        </Row>
+        <Row>
+          <Col><div id='cspc'>CSPC</div></Col>
+          <Col>
+            <div className='frame'>
+              <div id='do'>소개</div>
+              <div id='applyadvice'>지원안내</div>
+              <div id='apply'>지원하기</div>
+            </div>
+          </Col>
+          <Col><div id='place'>서강대학교 리치과학관 914호</div></Col>
+        </Row>
+        </Container>
+      /*
         <>
         
         <hr size="5" noshade />
@@ -30,7 +48,7 @@ const Footer = () => {
       </Nav>
         </Container>
         </Navbar>
-      </>
+      </>*/
     )
 }
 

@@ -1,0 +1,93 @@
+.picLine1{
+    position: absolute;
+    margin-top: 26px;
+    width: 367px;
+    height: 441px;
+    top: 1087px;
+}
+
+#line1{
+    position: absolute;
+    width: 367px;
+    height: 367px;
+    left: 0px;
+    top: 324px;
+    border-radius: 10px;
+}
+
+.picturedetailLine1{
+    position: absolute;
+    width: 367px;
+    height: 61px;
+    left: 0px;
+    top: 704px;
+}
+
+#picnameLine{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+}
+
+#moredetailLine{
+    position: absolute;
+    left: 2px;
+    top: 34px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.picLine2{
+    position: absolute;
+    width: 367px;
+    height: 441px;
+    top: 1300px;
+}
+
+#line2{
+    position: absolute;
+    width: 367px;
+    height: 367px;
+    left: 0px;
+    top: 708px;
+    border-radius: 10px;
+}
+
+.picturedetailLine2{
+    position: absolute;
+    width: 367px;
+    height: 61px;
+    left: 0px;
+    top: 1088px;
+}
+
+
+.picLine3{
+    position: absolute;
+    width: 367px;
+    height: 441px;
+    top: 1882px;
+}
+
+#line3{
+    position: absolute;
+    width: 367px;
+    height: 367px;
+    left: 0px;
+    top: 721px;
+    border-radius: 10px;
+}
+
+.picturedetailLine3{
+    position: absolute;
+    width: 367px;
+    height: 61px;
+    left: 0px;
+    top: 1101px;
+}
