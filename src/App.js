@@ -36,6 +36,7 @@ const App = () => {
           <Route path="/work" element={<Work />} />
           {/* 추가된 부분 */}
           <Route path="/introduce" element={<Introduce />} />
+          {/* apply페이지 경로 -> <Login /> */}
         <Route path="/apply" element={<Login />} />
         <Route path="/modify" element={<Modify />} />
         <Route path="/result" element={<Result />} />

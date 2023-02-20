@@ -4,10 +4,6 @@ import GoWriteApply from '../Components/GoWriteApply';
 
 import './AgreeAbove.css';
 
-// selected images
-import checkedImg from '../Components/img/checkedButton.png';
-import unCheckedImg from '../Components/img/unCheckedButton.png';
-
 const AgreeAbove = () => {
     const [checked, setChecked] = useState(1);
 

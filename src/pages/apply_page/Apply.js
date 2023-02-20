@@ -12,7 +12,7 @@ import ApplySecond from './ApplySecond/ApplySecond';
 import './Apply.css';
 
 const Apply = () => {
-    const i = 1;
+    const i = 0;
     // 처음 작성하는 경우
     if (i === 0)
         return (
