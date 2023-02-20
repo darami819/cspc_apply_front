@@ -20,6 +20,7 @@ import StaffDinner from './pages/doing_page/StaffDinner';
 import Study from './pages/doing_page/Study';
 import Work from './pages/doing_page/Work';
 import Introduce from './pages/doing_page/Introduce';
+import { Login } from './pages/login_page/Main';
 
 const App = () => {
   return (
@@ -35,7 +36,7 @@ const App = () => {
           <Route path="/work" element={<Work />} />
           {/* 추가된 부분 */}
           <Route path="/introduce" element={<Introduce />} />
-        <Route path="/apply" element={<Apply />} />
+        <Route path="/apply" element={<Login />} />
         <Route path="/modify" element={<Modify />} />
         <Route path="/result" element={<Result />} />
       </Route>
