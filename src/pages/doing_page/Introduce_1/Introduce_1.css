@@ -1,0 +1,196 @@
+/*랩실관리, 스터디/프로젝트, 선배찬스 부분*/
+/*
+.introduceframe{
+    position: absolute;
+    height: 600px;
+    left: 16.15%;
+    right: 16.2%;
+    top: 248px;    
+}
+
+.introduceframe2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding: 0px;
+    gap: 30px;
+    position: absolute;
+    width: 1300px;
+    height: 423px;
+    left: 0px;
+}
+*/
+.introduce1{
+    position: absolute;
+    width: 1300px;
+    height: 81px; 
+    top: 261px;
+    /* Inside auto layout */
+    flex: none;
+    flex-grow: 0; 
+}
+
+#introduce1-1{
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 118px;  
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: #000000;
+}
+
+#introduce1-2{
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 162px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#introduce1-3{
+    float: right;
+    position: absolute;
+    width: 670px;
+    height: 81px;
+    right: 0px;
+    top: 118px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: justify;
+    color: rgba(0, 0, 0, 0.8);   
+}
+
+.line1{
+    margin-top: 464px; /*이건 잘 모르겠는데 임의로 해둔 것..*/
+    width: 1300px;
+    height: 0px;
+    margin-left: -24px; /*line1만 약간 오른쪽으로 치우치는 현상 발생.. -> 일단 이걸로 해결*/
+    border: 0.3px solid #000000;
+    /* Inside auto layout */
+    flex: none;
+    flex-grow: 0;
+}
+
+
+.introduce2{
+    position: absolute;
+    width: 1300px;
+    height: 81px; 
+    top: 259px;
+    /* Inside auto layout */
+    flex: none;
+    flex-grow: 0; 
+}
+
+#introduce2-1{
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 259px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: #000000;
+}
+
+#introduce2-2{
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 303px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#introduce2-3{
+    float: right;
+    position: absolute;
+    width: 670px;
+    height: 81px;
+    right: 0px;
+    top: 259px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 27px */
+    text-align: justify;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.line2{
+    margin-top: 141px; /*이건 잘 모르겠는데 임의로 해둔 것..*/
+    width: 1300px;
+    height: 0px;
+    border: 0.3px solid #000000;
+    /* Inside auto layout */
+    flex: none;
+    flex-grow: 0;
+}
+
+.introduce3{
+    position: absolute;
+    width: 1300px;
+    height: 81px; 
+    top: 259px;
+    /* Inside auto layout */
+    flex: none;
+    flex-grow: 0; 
+}
+
+#introduce3-1{
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 400px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: #000000;
+}
+
+#introduce3-2{
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 444px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#introduce3-3{
+    float: right;
+    position: absolute;
+    width: 670px;
+    height: 81px;
+    right: 0px;
+    top: 400px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 27px */
+    text-align: justify;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.line3{
+    margin-top: 141px; /*이건 잘 모르겠는데 임의로 해둔 것..*/
+    width: 1300px;
+    height: 0px;
+    border: 0.3px solid #000000;
+    /* Inside auto layout */
+    flex: none;
+    order: 6;
+    flex-grow: 0;
+}
