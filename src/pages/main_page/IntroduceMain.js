@@ -1,10 +1,6 @@
 import React from 'react';
 import './Main.css';
 
-import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
-
-
 // image
 import img_picnic from './components/img/main_img_picnic.png';
 import img_mt from './components/img/main_img_mt.png';
