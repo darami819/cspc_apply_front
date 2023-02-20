@@ -1,7 +1,68 @@
 .footer{
     position: absolute;
-height: 260px;
-left: 16.15%;
-right: 16.15%;
-top: 3858px;
+    height: 260px;
+    left: 16.15%;
+    right: 16.15%;
+    top: 3858px;
+}
+
+.lined{
+    left: 0%;
+    right: 0%;
+    border: 0.3px solid #000000;
+}
+
+#cspc{
+    position: absolute;
+    width: 39px;
+    height: 20px;
+    margin-top: 401px;
+    font-weight: 700;
+    /* identical to box height */
+}
+
+.frame{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 50px;
+    width: 250px;
+    height: 20px;
+    position: absolute;
+}
+
+#do{
+    position: absolute;
+    margin-top: 401px;
+    font-weight: 400;
+}
+
+#applyadvice{
+    position: absolute;
+    margin-top: 401px;
+    margin-left: 78px;
+    font-weight: 400;
+}
+
+#apply{
+    position: absolute;
+    margin-top: 401px;
+    margin-left: 184px;
+    font-weight: 400;
+}
+
+#place{
+    position: absolute;
+    margin-top: 401px;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'IBMPlexSans-Regular';
+    src: url('../fonts/IBMPlexSans-Regular.ttf');
+    font-size: 15px;
+    font-style: normal;
+    line-height: 20px;
+    color: #000000;
 }
