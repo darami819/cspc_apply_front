@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // layouts
 import MainLayout from './layouts/MainLayout';
-import FlyingButton from './layouts/FlyingButton';
+import ApplyBanner from './layouts/applyBanner/ApplyBanner';
 
 // pages
 import Main from './pages/main_page/Main';
@@ -26,18 +26,20 @@ const App = () => {
   return (
     <Routes>
       <Route element={<MainLayout />}>
-          <Route path="/" element={<Main />} />
-          <Route path="/mt" element={<Mt />} />
-          <Route path="/party" element={<Party />} />
-          <Route path="/picnic" element={<Picnic />} />
-          <Route path="/senior" element={<Senior />} />
-          <Route path="/staffDinner" element={<StaffDinner />} />
-          <Route path="/study" element={<Study />} />
-          <Route path="/work" element={<Work />} />
-          {/* 추가된 부분 */}
-          <Route path="/introduce" element={<Introduce />} />
-          {/* apply페이지 경로 -> <Login /> */}
-        <Route path="/apply" element={<Login />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/mt" element={<Mt />} />
+        <Route path="/party" element={<Party />} />
+        <Route path="/picnic" element={<Picnic />} />
+        <Route path="/senior" element={<Senior />} />
+        <Route path="/staffDinner" element={<StaffDinner />} />
+        <Route path="/study" element={<Study />} />
+        <Route path="/work" element={<Work />} />
+        {/* 추가된 부분 */}
+        <Route path="/introduce" element={<Introduce />} />
+        {/* apply페이지 경로 -> <Login /> */}
+        <Route element={<ApplyBanner />} >
+          <Route path="/apply" element={<Apply />} />
+        </Route>
         <Route path="/modify" element={<Modify />} />
         <Route path="/result" element={<Result />} />
       </Route>

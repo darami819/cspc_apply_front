@@ -6,8 +6,57 @@ import Nav from 'react-bootstrap/Nav';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Footer = () => {
+    
     return(
-      <Container fluid="md">
+      <div
+        className="footer"
+      >
+        <div
+          className="footerLine"
+        />
+        <div
+          className="footerBox"
+        >
+          <div
+            className="cspc"
+          >
+            CSPC
+          </div>
+          <div
+            className="footerWord introduce"
+          >
+            소개
+          </div>
+          <div
+            className="footerWord applyHelp"
+          >
+            지원안내
+          </div>
+          <div
+            className="footerWord apply"
+          >
+            지원하기
+          </div>
+          <div
+            className="footerWord school"
+          >
+            서강대학교 리치과학관 914호
+          </div>
+          <div
+            className="footerWord help"
+          >
+            문의
+          </div>
+          {/* 이름과 이메일 api콜 필요 */}
+          <div
+            className="footerWord email"
+          >
+            학회장 OOO abc@gmail.com
+          </div>
+        </div>
+      </div>
+      /*
+      <Container fluid="fluid">
         <Row>
         <Col><div className='lined'></div></Col>
         </Row>
@@ -23,6 +72,7 @@ const Footer = () => {
           <Col><div id='place'>서강대학교 리치과학관 914호</div></Col>
         </Row>
         </Container>
+        */
       /*
         <>
         
