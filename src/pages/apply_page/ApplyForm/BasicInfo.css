@@ -1,0 +1,14 @@
+.basicInfo {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    top: 100px;
+    gap: 50px;
+
+    width: 1300px;
+    height: 254px;
+
+    background: gray;
+}
