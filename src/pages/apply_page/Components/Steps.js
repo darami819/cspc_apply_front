@@ -6,15 +6,19 @@ import './Components.css';
 import StepButton from './StepButton';
 
 const ThreeSteps = () => {
-    const [step, setStep] = useState(0);
+    const [step, setStep] = useState({
+        agree: 1,
+        write: 0,
+        apply: 0,
+    });
 
     return(
         <div
             className="StepStyle"
         >
-            <StepButton selected={(step===0)} children='개인정보 동의'/>
-            <StepButton selected={(step===1)} children='지원서 작성'/>
-            <StepButton selected={(step===2)} children='제출'/>
+            <StepButton selected={step} children='개인정보 동의'/>
+            <StepButton selected={step} children='지원서 작성'/>
+            <StepButton selected={step} children='제출'/>
         </div>
     );
 };

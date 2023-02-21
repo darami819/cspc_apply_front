@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // layouts
 import MainLayout from './layouts/MainLayout';
+import ApplyBanner from './layouts/applyBanner/ApplyBanner';
 
 // pages
 import Main from './pages/main_page/Main';
@@ -16,10 +17,13 @@ const App = () => {
   return (
     <Routes>
       <Route element={<MainLayout />}>
-          <Route path="/" element={<Main />} />
-          {/* 추가된 부분 */}
+        <Route path="/" element={<Main />} />
+        {/* 추가된 부분 */}
         <Route path="/introduce" element={<Introduce />} />
-        <Route path="/apply" element={<Login />} />
+        {/* apply페이지 경로 -> <Login /> */}
+        <Route element={<ApplyBanner />} >
+          <Route path="/apply" element={<Apply />} />
+        </Route>
       </Route>
     </Routes>
   );

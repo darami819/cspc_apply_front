@@ -45,6 +45,11 @@
     color: #000000;
 }
 
+.passed {
+    background: #ffffff;
+    color: rgba(0, 0, 0, 0.3);
+}
+
 .GoWriteApply {
     position: absolute;
 

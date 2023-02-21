@@ -7,18 +7,21 @@ import React from 'react';
 import ApplyFirst from './ApplyFirst/ApplyFirst';
 // Second Login
 import ApplySecond from './ApplySecond/ApplySecond';
+// Apply From
+import ApplyForm from './ApplyForm/ApplyForm';
 
 // css
 import './Apply.css';
 
 const Apply = () => {
-    const i = 1;
+    const i = 2;
     // 처음 작성하는 경우
     if (i === 0)
         return (
             <div
                 className="ApplyStyle"
             >
+
                 <ApplyFirst />
             </div>
         );
@@ -28,6 +31,14 @@ const Apply = () => {
                 className="ApplyStyle"
             >
                 <ApplySecond />
+            </div>
+        );
+    else if (i == 2)
+        return (
+            <div
+                className="ApplyStyle"
+            >
+                <ApplyForm />
             </div>
         );
 };
