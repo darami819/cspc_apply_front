@@ -1,0 +1,8 @@
+.InputBox {
+    width: 1300px;
+    height: 145px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #000000;
+}
