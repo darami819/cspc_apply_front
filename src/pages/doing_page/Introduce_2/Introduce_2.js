@@ -9,7 +9,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 const Introduce_2 = () => {
   return (
     <Container fluid="md">
-    <Row xl={3}>
+    <Row>
       <Col>
         <div className='icon1'>
           <img id='icon' src={bookmark} />
