@@ -108,14 +108,22 @@
 
 .pass__picline{
     position: relative;
-    top: 450px;
+    top: 540px;
     width: 584px;
     height: 456px;
     border-radius: 10px;
-    text-align: center;
+    margin: 0px auto;
 
     flex: none;
     order: 4;
     flex-grow: 0;
+}
 
+.pass__picline_spot{
+    position: absolute;
+    top: 18.11%;
+    left: 66.9%;
+    width: 54px;
+    height: 54px;
+ 
 }
