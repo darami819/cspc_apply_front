@@ -1,6 +1,6 @@
 import { Col, Container, Form ,Button } from "react-bootstrap"
 import {styles} from "./LoginForm.css"
-export const LoginForm = () => {
+export const LoginForm = ({state}) => {
     return <>
         <Container>
             <Col><div className="login_top_text">지원하기</div>
@@ -21,7 +21,6 @@ export const LoginForm = () => {
                         placeholder="비밀번호"
                         
                     />
-                    
                     <Button className="apply_button"> 지원서 작성하기</Button>
                 </Form>
 
