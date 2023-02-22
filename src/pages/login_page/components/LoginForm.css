@@ -1,0 +1,59 @@
+.login_top_text{
+    padding-top: 145px;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+}
+
+.login_info_text{
+    padding-top: 25px;
+    padding-bottom: 70px;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 27px */
+
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.login_input_box{
+    margin: auto;
+    width: 428px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-radius: 0;
+    margin-bottom: 25px;
+}
+
+.apply_button{
+    display: block;
+    margin: auto;
+    width: 429px;
+    height: 52px;
+    margin-top: 55px;
+
+    background: #000000;
+    border-radius: 10px;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border-color: inherit;
+    border-bottom-width: 1.8px;
+}
