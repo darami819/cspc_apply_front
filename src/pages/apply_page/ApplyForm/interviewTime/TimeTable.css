@@ -1,0 +1,61 @@
+.TimeTable {
+    position: relative;
+
+    align-content: center;
+
+    width: 1300px;
+    height: 507px;
+}
+
+.TimeTableBox {
+    position: relative;
+
+    align-content: center;
+
+    height: 23px;
+
+    margin-bottom: 30px;
+}
+
+.TimeTableButton {
+    width: 23px;
+    height: 23px;
+}
+
+.unCheckedButton {
+    background: #ffffff;
+}
+
+.checkedButton {
+    background: #000000;
+}
+
+.TimeTableWord {
+    position: absolute;
+
+    top: 0px;
+    left: 38px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+
+    color: #000000;
+}
+
+.smallLine {
+    position: absolute;
+
+    width: 315px;
+    height: 0px;
+
+    border: 0.3px solid #000000;
+}
+
+.topLine {
+    top: 200px;
+}
+
+.bottomLine {
+    top: 410px;
+}

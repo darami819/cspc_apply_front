@@ -4,7 +4,7 @@ import GoWriteApply from '../Components/GoWriteApply';
 
 import './ExistenceApplication.css';
 
-const ExistenceApplication = () => {
+const ExistenceApplication = ({ setPage }) => {
     return (
         <div
             className="ExistenceApplication"
@@ -23,7 +23,7 @@ const ExistenceApplication = () => {
             <div
                 className="GoWriteApplyStyle"
             >
-                <GoWriteApply />
+                <GoWriteApply isChecked={true} setPage={setPage}/>
             </div>
         </div>
     );

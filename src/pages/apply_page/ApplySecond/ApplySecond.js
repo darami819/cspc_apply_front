@@ -3,11 +3,11 @@ import React from 'react';
 import WriteApplication from '../Components/WriteApplication';
 import ExistenceApplication from './ExistenceApplication';
 
-const ApplySecond = () => {
+const ApplySecond = ({ setPage }) => {
     return(
         <div>
             <WriteApplication />
-            <ExistenceApplication />
+            <ExistenceApplication setPage={setPage}/>
         </div>
     );
 };

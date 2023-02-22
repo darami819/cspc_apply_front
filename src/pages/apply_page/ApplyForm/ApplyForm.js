@@ -6,18 +6,18 @@ import BasicInfo from './basicinfo/BasicInfo';
 import CoverLetter from './coverLetter/CoverLetter';
 import InterviewTime from './interviewTime/InterviewTime';
 
-const ApplyForm = () => {
+const ApplyForm = ({ isFirst }) => {
     return(
         <div>
-            <WriteApplication />
+            <WriteApplication/>
             <Steps
                 agree={2}
                 write={1}
                 apply={0}
             />
-            <BasicInfo />
-            <CoverLetter />
-            <InterviewTime />
+            <BasicInfo isFirst={isFirst}/>
+            <CoverLetter isFirst={isFirst}/>
+            <InterviewTime isFirst={isFirst}/>
         </div>
     );
 };

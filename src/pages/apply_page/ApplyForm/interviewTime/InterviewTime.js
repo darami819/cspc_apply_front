@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import axios from 'axios';
 
 import './InterviewTime.css';
 
@@ -54,13 +55,29 @@ const InterviewTime = () => {
                 </div>
                 <div>
                     <div
-                        className="InterviewTitle"
+                        className="InterviewTitle requirementMessage"
                     >
                         면접 시간에 대한 요구사항이 있으시다면 적어주세요.
                     </div>
                     <input
                         className="requirement"
                     />
+                </div>
+            </div>
+            <div
+                className="InterviewCheck"
+            >
+                <div
+                    className="InterviewCheckMessage"
+                >
+                    제출 전 내용을 다시 한 번 확인해주세요.
+                </div>
+                <div>
+                    <button
+                        className="InterviewCheckButton"
+                    >
+                        제출하기
+                    </button>
                 </div>
             </div>
         </div>

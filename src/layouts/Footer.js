@@ -32,14 +32,6 @@ const Footer = () => {
     fetchMaster();
   }, []);
 
-  const tempMaster = {
-    'name': '전영호',
-    email: 'sss,com',
-    phone: '010'
-  }
-  
-  console.log((master!==null)?master.name:null);
-
   return (
     <div
       className="footer"

@@ -5,7 +5,7 @@ import WriteApplication from '../Components/WriteApplication';
 import Steps from '../Components/Steps';
 import AgreePrivacy from './AgreePrivacy';
 
-const ApplyFirst = () => {
+const ApplyFirst = ({ setPage }) => {
     return (
         <div>
             <WriteApplication />
@@ -14,7 +14,7 @@ const ApplyFirst = () => {
                 write={0}
                 apply={0}
             />
-            <AgreePrivacy />
+            <AgreePrivacy setPage={setPage}/>
         </div>
     );
 };
