@@ -4,7 +4,7 @@ import './AgreePrivacy.css';
 
 import AgreeAbove from './AgreeAbove';
 
-const AgreePrivacy = () => {
+const AgreePrivacy = ({ setPage }) => {
     return (
         <div
             className="AgreePrivacy"
@@ -40,7 +40,7 @@ const AgreePrivacy = () => {
                     </div>
                 </div>
             </div>
-            <AgreeAbove />
+            <AgreeAbove setPage={setPage}/>
         </div>
     );
 };

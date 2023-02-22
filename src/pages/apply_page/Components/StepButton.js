@@ -10,7 +10,7 @@ const StepButton = ({ selected, children }) => {
         case 0:
             return (
                 <div
-                    className="StepButton Selected"
+                    className="StepButton UnSelected"
                 >
                     {children}
                 </div>
@@ -18,7 +18,7 @@ const StepButton = ({ selected, children }) => {
         case 1:
             return (
                 <div
-                    className="StepButton UnSelected"
+                    className="StepButton Selected"
                 >
                     {children}
                 </div>

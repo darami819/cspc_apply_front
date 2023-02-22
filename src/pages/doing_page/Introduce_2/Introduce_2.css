@@ -76,6 +76,14 @@
     top: 848px;
 }
 
+.iconsframe{
+    position: absolute;
+    width: 1300px;
+    height: 207px;
+    left: 310px;
+    top: 248px;    
+}
+
 .iconsframe2{
     display: flex;
     flex-direction: row;

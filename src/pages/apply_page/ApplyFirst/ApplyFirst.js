@@ -5,12 +5,16 @@ import WriteApplication from '../Components/WriteApplication';
 import Steps from '../Components/Steps';
 import AgreePrivacy from './AgreePrivacy';
 
-const ApplyFirst = () => {
-    return(
+const ApplyFirst = ({ setPage }) => {
+    return (
         <div>
             <WriteApplication />
-            <Steps />
-            <AgreePrivacy />
+            <Steps
+                agree={1}
+                write={0}
+                apply={0}
+            />
+            <AgreePrivacy setPage={setPage}/>
         </div>
     );
 };

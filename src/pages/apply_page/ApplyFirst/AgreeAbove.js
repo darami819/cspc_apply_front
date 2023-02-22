@@ -4,8 +4,8 @@ import GoWriteApply from '../Components/GoWriteApply';
 
 import './AgreeAbove.css';
 
-const AgreeAbove = () => {
-    const [checked, setChecked] = useState(1);
+const AgreeAbove = ({ setPage }) => {
+    const [checked, setChecked] = useState(0);
 
     const isChecked = () => {
         if (checked === 0)
@@ -28,12 +28,12 @@ const AgreeAbove = () => {
             <div>
                 {isChecked() ?
                     <button
-                        className="unChecked Button"
+                        className="checked Button"
                         onClick={(changeChecked)}
                     >
                     </button>
                     : <button
-                        className="checked Button"
+                        className="unChecked Button"
                         onClick={(changeChecked)}
                     >
                     </button>
@@ -48,7 +48,7 @@ const AgreeAbove = () => {
                 className="GoWriteApplyButton"
             >
                 {/* isChecked() 가 1일 때만 링크 이동할 수 있게 하기 */}
-                <GoWriteApply />
+                <GoWriteApply isChecked={isChecked()} first setPage={setPage}/>
             </div>
         </div>
     );
