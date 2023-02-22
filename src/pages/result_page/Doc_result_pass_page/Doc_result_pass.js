@@ -1,6 +1,7 @@
 import React from 'react'
 import './Doc_result_pass.css';
-import imgMap from '../img/map_1.png'
+import imgMap from '../img/map.png'
+import imgSpot from '../img/map-marker-Filled.png'
 
 
 const Doc_result_pass = () =>{
@@ -19,9 +20,14 @@ const Doc_result_pass = () =>{
                 <div className='pass__resultlen3'>면접 안내</div>
                 <div className='pass__resultlen4'>면접 시간은 <b>3월 14일 월요일 오후 14시 30분</b>입니다.<br/>
                     면접 시간에 맞춰 <b>리치과학관 914호</b>로 와주세요.<br/>
-                    문의사항이 있으시다면 아래 이메일로 문의해주세요.
+                    문의사항이 있으시다면 아래 이메일로 문의해주세요.<br />
                 </div>
-                <img id='pass__picline' src={imgMap} />
+                <div className='pass__picline'>
+                    <img src={imgMap} /> 
+                    <div className='pass__picline_spot'>
+                        <img src={imgSpot} />
+                        </div>
+                        </div>
             </div>
                         
         </div>

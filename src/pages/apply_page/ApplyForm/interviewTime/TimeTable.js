@@ -1,5 +1,9 @@
 import React from 'react';
 
+import checkBox from './checkBox.png';
+
+import './TimeTable.css';
+
 const TimeTable = () => {
     // api 값으로 받아오기
     const time_list = [
@@ -14,7 +18,34 @@ const TimeTable = () => {
     ];
 
     return (
-        <div></div>
+        <div
+            className="TimeTable"
+        >
+            {time_list.map(time => (
+                <div
+                    className="TimeTableBox"
+                >
+                    <button className="TimeTableButton unCheckedButton" />
+                    <div
+                        className="TimeTableWord"
+                    >
+                        {time.data}
+                    </div>
+                </div>
+            ))}
+            <div className="smallLine topLine" />
+            <div className="smallLine bottomLine" />
+            <div
+                className="TimeTableBox"
+            >
+                <button className="TimeTableButton unCheckedButton" />
+                <div
+                    className="TimeTableWord"
+                >
+                    가능한 시간이 없음
+                </div>
+            </div>
+        </div>
     );
 };
 
