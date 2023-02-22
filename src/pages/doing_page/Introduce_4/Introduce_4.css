@@ -1,93 +1,104 @@
-.picLine1{
-    position: absolute;
-    margin-top: 26px;
-    width: 367px;
-    height: 441px;
-    top: 1087px;
+.Main{
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
 }
 
-#line1{
+.frame{
+    position: relative;
+    width: 1299px;
+    height: 1603px;
+    left: 0px;
+    top: 0px;
+}
+
+.First{
+    position: absolute;
+    width: 367px;
+    height: 441px;
+    left: 0px;
+    top: 0px;
+}
+
+.picture{
     position: absolute;
     width: 367px;
     height: 367px;
-    left: 0px;
-    top: 324px;
+    top: 0px;
     border-radius: 10px;
 }
 
-.picturedetailLine1{
+.name1{
     position: absolute;
-    width: 367px;
-    height: 61px;
-    left: 0px;
-    top: 704px;
-}
-
-#picnameLine{
-    position: absolute;
-    left: 0px;
-    top: 0px;
+    top: 380px;
     font-weight: 700;
     font-size: 20px;
     line-height: 26px;
-    color: #000000;
 }
 
-#moredetailLine{
+.detail1{
     position: absolute;
-    left: 2px;
-    top: 34px;
+    width: 365px;
+    height: 27px;
+    top: 414px;
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
-    color: rgba(0, 0, 0, 0.8);
 }
 
-.picLine2{
+.num2{
+    left: 466px;
+}
+
+.num3{
+    left: 932px;
+}
+
+
+.Second{
     position: absolute;
     width: 367px;
     height: 441px;
-    top: 1300px;
+    top: 581px;
 }
 
-#line2{
+.name2{
     position: absolute;
-    width: 367px;
-    height: 367px;
-    left: 0px;
-    top: 708px;
-    border-radius: 10px;
+    top: 380px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
 }
 
-.picturedetailLine2{
+.detail2{
     position: absolute;
-    width: 367px;
-    height: 61px;
-    left: 0px;
-    top: 1088px;
+    top: 421px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
 }
 
-
-.picLine3{
+.Third{
     position: absolute;
     width: 367px;
     height: 441px;
-    top: 1882px;
+    top: 1162px;
 }
 
-#line3{
+.name3{
     position: absolute;
-    width: 367px;
-    height: 367px;
-    left: 0px;
-    top: 721px;
-    border-radius: 10px;
+    top: 380px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
 }
 
-.picturedetailLine3{
+.detail3{
     position: absolute;
-    width: 367px;
-    height: 61px;
-    left: 0px;
-    top: 1101px;
+    top: 421px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
 }
