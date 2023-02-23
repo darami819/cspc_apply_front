@@ -1,0 +1,137 @@
+.humanForm{
+    display: flex;
+    position: relative;
+    width: 1300px;
+    height: 1052px;
+    align-items: center;
+    top: 71px;
+    left: 0px;
+    text-align: center;
+    justify-content: center;
+}
+.cspcCul{
+    position: absolute;
+    left: 0px;
+    top: 88px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.cspcIntro{
+    position: absolute;
+    left: 0px;
+    top: 132px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.SepLine{
+    position: absolute;
+    width: 1300px;
+    height: 0px;
+    top: 205px;
+    left: 0px;
+    border: 0.3px solid #000000;
+}
+
+.Line1{
+    position: absolute;
+    justify-content: space-between;
+    top: 255px;
+    left: 0px;
+}
+
+.Line1_1{
+    box-sizing: border-box;
+    position: absolute;
+    width: 325px;
+    height: 325px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.Line1_2{
+    position: absolute;
+    width: 325px;
+    height: 325px;
+    /*left: 487px;*/  
+    margin-left: 487px;  
+    background: #000000;
+    border-radius: 10px;
+}
+
+.Line1_3{
+    box-sizing: border-box;
+    position: absolute;
+    width: 325px;
+    height: 325px;
+    margin-left: 975px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.img1{
+    position: absolute;
+    width: 157px;
+    height: 157px;
+    left: 85px;
+    top: 58px;
+}
+
+.img2{
+    position: absolute;
+    width: 157px;
+    height: 157px;
+    left: 85px;
+    top: 58px;
+}
+
+
+.sen1{
+    position: absolute;
+    left: 38px;
+    top: 245px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+}
+.white{
+    color: white;
+    text-align: center;
+    margin-left: 24px;
+}
+
+
+.Line2{
+    position: absolute;
+    justify-content: space-between;
+    left: 0px;
+    top: 639px;
+}
+
+.Line2_1{
+    position: absolute;
+    width: 325px;
+    height: 325px;
+    background: #000000;
+    border-radius: 10px;
+}
+.Line2_2{
+    box-sizing: border-box;
+    position: absolute;
+    width: 325px;
+    height: 325px;
+    margin-left: 487px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+.Line2_3{
+    position: absolute;
+    width: 325px;
+    height: 325px;
+    margin-left: 975px;
+    background: #000000;
+    border-radius: 10px;
+}

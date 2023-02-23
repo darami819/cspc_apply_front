@@ -16,6 +16,7 @@ import Doc_result_fail from './pages/result_page/Doc_result_fail_page/Doc_result
 import Doc_result_pass from './pages/result_page/Doc_result_pass_page/Doc_result_pass';
 import In_result_fail  from './pages/result_page/Interview_result_fail_page/In_result_fail';
 import In_result_pass from './pages/result_page/Interview_result_pass_page/In_result_pass';
+import ApplyGuide from './pages/apply_page/applyGuide/ApplyGuide';
 
 
 const App = () => {
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/result/interviewpass" element={<In_result_pass/>} />
           <Route path="/result/interviewfail" element={<In_result_fail/>} />
         </Route>
+        <Route path='/applyGuide' element={<ApplyGuide />} />
       </Route>
     </Routes>
   );
