@@ -9,79 +9,55 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const Introduce_4 = () => {
   return (
-    <Container fluid="md">
-    <Row>
-      <Col>
-      <div className='picLine1'>
-        <img id='line1' src={imgPicnic} />
-        <div className='picturedetailLine1'>
-            <div id='picnameLine'>소풍</div>
-            <div id='moredetailLine'>함께 떠나는 소풍</div>
-        </div>
-    </div>
-      </Col>
-      <Col>
-      <div className='picLine1'>
-        <img id='line1' src={imgPicnic} />
-        <div className='picturedetailLine1'>
-            <div id='picnameLine'>회식</div>
-            <div id='moredetailLine'>든든한 예산으로 맛있는 회식</div>
-        </div>
-    </div>
-      </Col>
-      <Col>
-      <div className='picLine1'>
-        <img id='line1' src={imgMt} />
-        <div className='picturedetailLine1'>
-            <div id='picnameLine'>MT</div>
-            <div id='moredetailLine'>방학에 함께 떠나는 MT</div>
-        </div>
-    </div>
-      </Col>
-    </Row>
+    <div className='main'>
+    <div className='Main'>
+        <div className='frame'>
+            <div className='First'>
+                <img className='picture' src={imgPicnic} />
+                <div className='name1'>소풍</div>
+                <div className='detail1'>봄, 가을마다 함께 떠나는 소풍</div>
+            </div>
 
-    <Row className='justify-content-center'>
-    <Col>
-    <div className='picLine2'>
-        <img id='line2' src={imgHaek} />
-        <div className='picturedetailLine2'>
-            <div id='picnameLine'>해커톤</div>
-            <div id='moredetailLine'>함께 밤 새면서 달리는 해커톤</div>
-        </div>
-    </div>
-    </Col>
-    <Col>
-    <div className='picLine2'>
-        <img id='line2' src={imgHaek} />
-        <div className='picturedetailLine2'>
-            <div id='picnameLine'>세미나</div>
-            <div id='moredetailLine'>선배들에게 듣는 유익한 꿀팁 세미나</div>
-        </div>
-    </div>
-    </Col>
-    <Col>
-    <div className='picLine2'>
-        <img id='line2' src={imgParty} />
-        <div className='picturedetailLine2'>
-            <div id='picnameLine'>크리스마스 파티</div>
-            <div id='moredetailLine'>모든 CSPC 랩원이 모여 이야기하는 크파</div>
-        </div>
-    </div>
-    </Col>
-    </Row>
+            <div className='First num2'>
+                <img className='picture' src={imgPicnic} />
+                <div className='name1'>회식</div>
+                <div className='detail1'>든든한 예산으로 맛있는 회식</div>
+            </div>
 
-    <Row className='justify-content-center'>
-    <Col>
-    <div className='picLine3'>
-        <img id='line3' src={imgParty} />
-        <div className='picturedetailLine3'>
-            <div id='picnameLine'>디스코드</div>
-            <div id='moredetailLine'>심심하면 언제든 함께 만나는 디스코드</div>
+            <div className='First num3'>
+                    <img className='picture' src={imgMt} />
+                    <div className='name1'>MT</div>
+                    <div className='detail1'>방학에 함께 떠나는 MT</div>
+            </div>
+
+            
+            <div className='Second'>
+            <img className='picture' src={imgHaek} />
+                <div className='name2'>해커톤</div>
+                <div className='detail2'>함께 밤 새면서 달리는 해커톤</div>
+            </div>
+
+            <div className='Second num2'>
+                <img className='picture' src={imgPicnic} />
+                <div className='name2'>세미나</div>
+                <div className='detail2'>선배들에게 듣는 유익한 꿀팁 세미나</div>
+            </div>
+
+            <div className='Second num3'>
+                <img className='picture' src={imgParty} />
+                <div className='name2'>크리스마스 파티</div>
+                <div className='detail2'>모든 CSPC 랩원이 함께 모여 이야기하는 크파</div>
+            </div>
+
+
+            <div className='Third'>
+            <img className='picture' src={imgHaek} />
+                <div className='name3'>디스코드</div>
+                <div className='detail3'>심심하면 언제든 함께 만나는 디스코드</div>
+            </div>
+            </div>
         </div>
     </div>
-    </Col>
-    </Row>
-  </Container>
   );
 }
 

@@ -1,5 +1,73 @@
 /*아이콘 부분*/
 
+.iconsMain{
+    position: relative;
+    width: 1298px;
+    height: 250px;
+}
+
+.iconsFrame{
+    position: absolute;
+    display: flex;
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 298px;
+    height: 115px;
+    top: 67.5px;
+}
+
+.icon{
+    position: relative;
+    height: 100px;
+}
+
+.n1{
+    width: 210px;
+}
+
+.n2{
+    width: 210px;
+}
+
+.n3{
+    width: 290px;
+}
+
+.icon1{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+}
+
+.icon2{
+    position: absolute;
+    left: 41px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.icon3{
+    position: absolute;
+    top: 45px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+
+
+
+
+
+
+
+/*
 .iconsframe{
     position: absolute;
     width: 1298px;
@@ -30,17 +98,13 @@
     top: calc(50% - 100px/2);
 }
 
-#icon{
-    width: 30px;
-    height: 30px;
-}
+
 
 
 .icon1{
     margin-top: 164px;
     width: 185px;
     height: 100px;
-    /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -62,4 +126,4 @@
     font-size: 18px;
     line-height: 150%;
     color: #000000;
-}
+}*/

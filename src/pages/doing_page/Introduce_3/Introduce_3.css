@@ -1,28 +1,76 @@
-#pictureintro1{
-    margin-top: 228px;
+.picFrame{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 153px 0px;
+    gap: 50px;
+    width: 1300px;
+    height: 324px;
+    left: 0px;
+    top: 0px;
+}
+
+.picIntro{
     position: absolute;
+    width: 1299px;
+    height: 71px;
+    top: 153px;
+}
+
+.picIntro1{
+    position: absolute;
+    left: 0px;
+    top: 0px;
     font-weight: 700;
     font-size: 24px;
     line-height: 31px;
-    color: #000000;
 }
 
-#pictureintro2{
-    margin-top: 272px;
+.picIntro2{
     position: absolute;
+    left: 0px;
+    top: 44px;
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
-    color: rgba(0, 0, 0, 0.8);
 }
 
-.line{
-    margin-top: 349px;
-    margin-left: 12px; /**/
+.sepLine{
+    position: absolute;
     width: 1300px;
     height: 0px;
+    top: 274px;
     border: 0.3px solid #000000;
-    flex: none;
-    flex-grow: 0;
 }
 
+
+
+
+
+/*
+.picturesForm{  
+    position: relative;
+    width: 1299px;
+    height: 1603px;
+    top: 1422px;
+}
+
+.pictureMain{
+    position: absolute;
+    text-align: center;
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pic{
+    position: absolute;
+width: 367px;
+height: 367px;
+left: 0px;
+top: 0px;
+
+border-radius: 10px;
+}*/
