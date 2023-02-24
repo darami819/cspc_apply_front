@@ -27,6 +27,7 @@ const App = () => {
         <Route path="/introduce" element={<Introduce />} />
         {/* apply페이지 경로 -> <Login /> */}
         <Route path="/apply" element={<Apply />} />
+        <Route path="/login" element={<Login/>}/>
         <Route element={<ApplyBanner />} >
           <Route path="result/docfail" element={<Doc_result_fail/>} />
           <Route path="result/docpass" element={<Doc_result_pass/>} />
