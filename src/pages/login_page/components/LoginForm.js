@@ -3,15 +3,40 @@ import { styles } from "./LoginForm.css";
 import { useRef } from 'react';
 import { login } from 'apis/login';
 import { useAsync } from "react-async"
+import { useNavigate } from "react-router-dom";
+import { get_resume } from "apis/resume";
 
 export const LoginForm = ({ state }) => {
     const id = useRef(null);
     const password = useRef(null);
+    const navigate = useNavigate();
 
     const Submit = async () => {
-        console.log(id.current.value, password.current.value)
-        const [status_code, data] = await login(id.current.value, password.current.value);
+        const id_temp = id.current.value;
+        const pw_temp = password.current.value;
+    
+        const [status_code, data] = await login(id_temp, pw_temp);
         console.log(status_code, data);
+        switch (status_code) {
+            case 200: // 신규 지원자
+                sessionStorage.setItem('id', id_temp);
+                sessionStorage.setItem('pw', pw_temp);
+                navigate('/apply');
+                break;
+            case 201: // 기존 지원자
+                sessionStorage.setItem('id', id_temp);
+                sessionStorage.setItem('pw', pw_temp);
+                await get_resume();
+                console.log('페이지 이동');
+                navigate('/apply');
+                break;
+            case 404:
+                alert('로그인 항목을 채워주세요!')
+                break;
+            case 500:
+                alert('로그인 실패')
+                break;
+        }
     }
     return (<>
         <Container>
@@ -32,7 +57,12 @@ export const LoginForm = ({ state }) => {
                         placeholder="비밀번호"
                         
                     />
-                    <Button className="apply_button" onClick={Submit}> 지원서 작성하기</Button>
+                    <Button className="apply_button" onClick={Submit}> {
+                        state === 'apply'
+                            ?'지원서 작성하기' : state === 'middle'
+                            ? '서류 결과 확인하기' : '최종 결과 확인하기'
+                    }
+                    </Button>
                 </Form>
 
             </Col>
