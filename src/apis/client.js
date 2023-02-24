@@ -4,6 +4,6 @@ const API_SERVER_URL = 'https://apply.cspc.me/api'
 
 export const Client = axios.create({
     baseURL: API_SERVER_URL,
-    headers: get_auth_header().headers
+    get_auth_header,
 
 })
