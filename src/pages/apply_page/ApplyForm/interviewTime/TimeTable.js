@@ -1,27 +1,49 @@
 import React from 'react';
+import { useState } from 'react';
+import { useAsync } from 'react-async';
 
-import checkBox from './checkBox.png';
+import { interview } from '../../../../apis/interview';
 
 import './TimeTable.css';
 
-const TimeTable = () => {
-    // api 값으로 받아오기
-    const time_list = [
-        { id: 0, data: '3월 12일 일요일 오후 6시 ~ 7시' },
-        { id: 1, data: '3월 12일 일요일 오후 7시 ~ 8시' },
-        { id: 2, data: '3월 12일 일요일 오후 8시 ~ 9시' },
-        { id: 3, data: '3월 12일 일요일 오후 9시 ~ 10시' },
-        { id: 4, data: '3월 12일 일요일 오후 6시 ~ 7시' },
-        { id: 5, data: '3월 12일 일요일 오후 7시 ~ 8시' },
-        { id: 6, data: '3월 12일 일요일 오후 8시 ~ 9시' },
-        { id: 7, data: '3월 12일 일요일 오후 9시 ~ 10시' },
-    ];
+import CheckBox from './CheckBox';
 
-    return (
-        <div
-            className="TimeTable"
-        >
-            {time_list.map(time => (
+const TimeTable = ({ contents, setContent }) => {
+
+    const { data, error, isLoading } = useAsync({ promiseFn: interview }, []);
+
+    const [timeIndex, setTimeIndex] = useState(contents.interview_time_choice);
+
+    console.log(timeIndex);
+
+    // const timeIndex = contents.interview_time_choice;
+
+    if (isLoading) return "Loading...";
+    if (error) return `Something went wrong: ${error.message}`;
+    if (data)
+
+        return (
+            <div
+                className="TimeTable"
+            >
+                {data.map(time => (
+                    <div
+                        className="TimeTableBox"
+                    >
+                        <CheckBox
+                        contents={contents} setContent={setContent}
+                        id={time.id} isChecked={String(timeIndex).includes(time.id)}
+                        timeIndex={timeIndex} setTimeIndex={setTimeIndex}
+                        />
+                        <div
+                            className="TimeTableWord"
+                        >
+                            {time.time}
+                        </div>
+                    </div>
+                ))}
+                <div className="smallLine topLine" />
+                <div className="smallLine bottomLine" />
                 <div
                     className="TimeTableBox"
                 >
@@ -29,24 +51,11 @@ const TimeTable = () => {
                     <div
                         className="TimeTableWord"
                     >
-                        {time.data}
+                        가능한 시간이 없음
                     </div>
                 </div>
-            ))}
-            <div className="smallLine topLine" />
-            <div className="smallLine bottomLine" />
-            <div
-                className="TimeTableBox"
-            >
-                <button className="TimeTableButton unCheckedButton" />
-                <div
-                    className="TimeTableWord"
-                >
-                    가능한 시간이 없음
-                </div>
             </div>
-        </div>
-    );
+        );
 };
 
 export default TimeTable;

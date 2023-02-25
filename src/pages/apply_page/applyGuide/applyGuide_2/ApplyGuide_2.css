@@ -1,121 +1,141 @@
-.mform{
+.mfrom{
     position: relative;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 88px 0px;
-    gap: 50px;
     width: 1300px;
     height: 561px;
-    left: 310px;
-    top: 0px;
-    font-family: 'IBM Plex Sans';
-    font-style: normal;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
-
 .process{
-    position: absolute;
+    position: absolute;  
+    margin-top: 142px;
     font-weight: 700;
     font-size: 24px;
     line-height: 31px;
-    top: 176px;
-    left: 0px;
-    color: #000000;
 }
-
-.linem{
+.guideLine{
     position: absolute;
     width: 1300px;
-    height: 0px;
-    top: 257px;  
+    height: 0px;  
+    margin-top: 223px;
     border: 0.3px solid #000000;
 }
-
-.banner_content{
-    position: absolute;
-    top: 307px;
-    justify-content: space-evenly;
+.circleFrame{
+    position: relative;
+    width: 1300px;
+    height: 254px; 
+    font-style: normal;
+    text-align: center;
+    justify-content: space-between;
     align-items: center;
 }
-
-.right{
-    object-fit: contain;
-    height: 26px;
-}
-
-.document_circle {
-    background-color: rgba(85, 169, 190, 1);
-    width: 235px;
-    height: 235px;
-    border: 5px solid white;
-    outline: 5px solid rgba(85, 169, 190, 0.85);
-    border-radius: 50%;
-    display: flex;
-}
-
-.interview_circle {
-    background-color: rgba(85, 169, 190, 0.85);
-    width: 235px;
-    height: 235px;
-    /* border: 5px solid black;
-    outline: 5px solid rgba(85, 169, 190, 0.85); */
-    border-radius: 50%;
-    display: flex; 
-}
-
-.join_circle{
+.firstCircle {
+    position: absolute;
+    left: 108px;
+    top: 287px;
+    
     background-color: rgba(85, 169, 190, 0.7);
     width: 235px;
     height: 235px;
-    /* border: 5px solid black;
-    outline: 5px solid rgba(85, 169, 190, 0.85); */
+    border: 5px solid white;
+    outline: 5px solid rgba(85, 169, 190, 0.7);
     border-radius: 50%;
-    display: flex;
 }
-
-.circle_content{
-    display: flex;
-    color : white;
-    text-align: center;
-    vertical-align: middle;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;   
+.secondCircle{
+    position: absolute;
+    left: 532px;
+    top: 287px;
+    background-color: rgba(85, 169, 190, 0.85);
+    width: 235px;
+    height: 235px;    
+    border-radius: 50%;
 }
-
-.process_text{
-    font-family: 'IBM Plex Sans';
-    font-style: normal;
+.thirdCircle{
+    position: absolute;
+    left: 956px;
+    top: 287px;
+    background-color: rgba(85, 169, 190, 1);
+    width: 235px;
+    height: 235px;
+    border-radius: 50%;
+}
+.circleTitle1{
+    position: absolute;
+    left: 90px;
+    top: 83px;
     font-weight: 700;
     font-size: 24px;
     line-height: 31px;
+    color: white;
     text-align: center;
-    color: #FFFFFF;
 }
-
-.date_text{
-    padding-top: 10px;
-    font-family: 'IBM Plex Sans';
-    font-style: normal;
+.circleContent1{
+    position: absolute;
+    text-align: center;
+    left: 45px;
+    top: 130px;
     font-weight: 400;
     font-size: 18px;
     line-height: 23px;
-    text-align: center;
     color: #FFFFFF;
 }
 
-.ApplyButton{
+.circleTitle2{
     position: absolute;
+    left: 95px;
+    top: 83px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: white;
+    text-align: center;
+}
+.circleContent2{
+    position: absolute;
+    text-align: center;
+    left: 69px;
+    top: 130px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+.circleContent3{
+    position: absolute;
+    text-align: center;
+    left: 75px;
+    top: 130px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+.right1{
+    position: absolute;
+    left: 431px;
+    top: 387px;
+    height: 26px;
+}
+
+.right2{
+    position: absolute;
+    left: 855px;
+    top: 387px;
+    height: 26px;
+}
+
+.ApplyButton{ 
     width: 429px;
     height: 52px;
     left: 747px;
-    top: 1949px;
+    margin-top: 462.5px;
     background: #000000;
     border-radius: 10px;
 }
 
 .applyLetter{
-    position: absolute;
+    
     left: 185px;
     top: 14px;
     font-weight: 700;
@@ -123,11 +143,4 @@
     line-height: 23px;
     text-align: center;
     color: #FFFFFF;
-}
-
-.justCenter{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

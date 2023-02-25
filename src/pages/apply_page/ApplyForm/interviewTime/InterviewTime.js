@@ -8,7 +8,7 @@ import TimeTable from './TimeTable';
 
 import star from '../basicinfo/requiredInput.png';
 
-const InterviewTime = () => {
+const InterviewTime = ({ contents, setContent, uploadContent }) => {
     return(
         <div
             className="InterviewTime"
@@ -51,7 +51,7 @@ const InterviewTime = () => {
                 <div
                     className="InterviewContent"
                 >
-                    <TimeTable />
+                    <TimeTable contents={contents} setContent={setContent}/>
                 </div>
                 <div>
                     <div
@@ -75,6 +75,7 @@ const InterviewTime = () => {
                 <div>
                     <button
                         className="InterviewCheckButton"
+                        onClick={() => uploadContent()}
                     >
                         제출하기
                     </button>

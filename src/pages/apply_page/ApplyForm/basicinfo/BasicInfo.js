@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import RequiredInput from './RequiredInput';
+import RequiredName from './components/RequiredName';
+import RequiredPhone from './components/RequiredPhone';
+import RequiredStudentId from './components/RequiredStudentId';
+import RequiredSemester from './components/RequiredSemester';
 
 import './BasicInfo.css';
 
-const BasicInfo = () => {
-    return(
+const BasicInfo = ({ contents = { contents }, setContent = { setContent } }) => {
+    const onChange = (e) => {
+        const { value, name } = e.target;
+        setContent({
+            ...contents,
+            [name]: value
+        });
+    };
+
+    return (
         <div
             className="basicInfo"
         >
-            <RequiredInput children="이름" name/>
-            <RequiredInput children="전화번호" phone/>
-            <RequiredInput children="학번" studentId/>
-            <RequiredInput children="학기" semester/>
+            <RequiredName info={contents.name} onChange={onChange} />
+            <RequiredPhone info={contents.phone} onChange={onChange} />
+            {/*  학번 어떻게 가져오는건지?  */}
+            {/*
+            <RequiredStudentId info={contents.studentId} onChange={onChange}/>
+            */}
+            <RequiredSemester info={contents.semester} onChange={onChange} />
         </div>
     );
 };

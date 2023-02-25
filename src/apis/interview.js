@@ -1,5 +1,5 @@
 import { Client } from "./client";
-export const get_recruit_info = async () => {
+export const interview = async () => {
     try {
         const response = await Client.get('/apply/interview');
         console.log(response.data);

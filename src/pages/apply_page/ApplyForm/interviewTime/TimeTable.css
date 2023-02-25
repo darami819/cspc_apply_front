@@ -22,6 +22,10 @@
     height: 23px;
 }
 
+.CheckButton {
+    background: gray;
+}
+
 .unCheckedButton {
     background: #ffffff;
 }

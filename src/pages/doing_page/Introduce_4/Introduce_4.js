@@ -4,7 +4,12 @@ import './Introduce_4.css';
 import imgPicnic from '../../doing_page/img/picnic.png';
 import imgHaek from '../../doing_page/img/haek.png';
 import imgMt from '../../doing_page/img/mt.png';
+import imgMt2 from '../../doing_page/img/mt2.jpg';
 import imgParty from '../../doing_page/img/party.png';
+import imgDiscord from '../../doing_page/img/discord.png';
+import imgImsi from '../../doing_page/img/캡처.PNG';
+import imgSemina from '../../doing_page/img/semina.jpg';
+import imgFood from '../../doing_page/img/food.jpg';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Introduce_4 = () => {
@@ -19,7 +24,7 @@ const Introduce_4 = () => {
             </div>
 
             <div className='First num2'>
-                <img className='picture' src={imgPicnic} />
+                <img className='picture' src={imgFood} />
                 <div className='name1'>회식</div>
                 <div className='detail1'>든든한 예산으로 맛있는 회식</div>
             </div>
@@ -38,7 +43,7 @@ const Introduce_4 = () => {
             </div>
 
             <div className='Second num2'>
-                <img className='picture' src={imgPicnic} />
+                <img className='picture' src={imgSemina} />
                 <div className='name2'>세미나</div>
                 <div className='detail2'>선배들에게 듣는 유익한 꿀팁 세미나</div>
             </div>
@@ -51,7 +56,7 @@ const Introduce_4 = () => {
 
 
             <div className='Third'>
-            <img className='picture' src={imgHaek} />
+            <img className='picture' src={imgDiscord} />
                 <div className='name3'>디스코드</div>
                 <div className='detail3'>심심하면 언제든 함께 만나는 디스코드</div>
             </div>
