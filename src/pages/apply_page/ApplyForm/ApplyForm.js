@@ -1,12 +1,15 @@
 import React from 'react';
 
+import axios from 'axios';
+
 import WriteApplication from '../Components/WriteApplication';
 import Steps from '../Components/Steps';
 import BasicInfo from './basicinfo/BasicInfo';
 import CoverLetter from './coverLetter/CoverLetter';
 import InterviewTime from './interviewTime/InterviewTime';
 
-const ApplyForm = ({ isFirst }) => {
+const ApplyForm = ({ contents, setContent, uploadContent }) => {
+
     return(
         <div>
             <WriteApplication/>
@@ -15,9 +18,9 @@ const ApplyForm = ({ isFirst }) => {
                 write={1}
                 apply={0}
             />
-            <BasicInfo isFirst={isFirst}/>
-            <CoverLetter isFirst={isFirst}/>
-            <InterviewTime isFirst={isFirst}/>
+            <BasicInfo contents={contents} setContent={setContent}/>
+            <CoverLetter contents={contents} setContent={setContent}/>
+            <InterviewTime contents={contents} setContent={setContent} uploadContent={uploadContent}/>
         </div>
     );
 };

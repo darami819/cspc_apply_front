@@ -47,6 +47,18 @@
     text-align: center;
 }
 
+.semester {
+    width: 60px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: rgba(0, 0, 0);
+
+    text-align: center;
+}
+
 .SemesterStandard {
     position: relative;
 
