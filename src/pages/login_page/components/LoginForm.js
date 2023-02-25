@@ -26,9 +26,9 @@ export const LoginForm = ({ state }) => {
             case 201: // 기존 지원자
                 sessionStorage.setItem('id', id_temp);
                 sessionStorage.setItem('pw', pw_temp);
-                await get_resume();
-                console.log('페이지 이동');
-                navigate('/apply');
+                const resume = await get_resume();
+                console.log(resume);
+                navigate('/apply',{state: resume});
                 break;
             case 404:
                 alert('로그인 항목을 채워주세요!')
