@@ -14,8 +14,6 @@ const TimeTable = ({ contents, setContent }) => {
 
     const [timeIndex, setTimeIndex] = useState(contents.interview_time_choice);
 
-    console.log(timeIndex);
-
     // const timeIndex = contents.interview_time_choice;
 
     if (isLoading) return "Loading...";
@@ -31,9 +29,9 @@ const TimeTable = ({ contents, setContent }) => {
                         className="TimeTableBox"
                     >
                         <CheckBox
-                        contents={contents} setContent={setContent}
-                        id={time.id} isChecked={String(timeIndex).includes(time.id)}
-                        timeIndex={timeIndex} setTimeIndex={setTimeIndex}
+                            contents={contents} setContent={setContent}
+                            id={time.id} isChecked={String(timeIndex).includes(time.id)}
+                            timeIndex={timeIndex} setTimeIndex={setTimeIndex}
                         />
                         <div
                             className="TimeTableWord"
@@ -44,16 +42,22 @@ const TimeTable = ({ contents, setContent }) => {
                 ))}
                 <div className="smallLine topLine" />
                 <div className="smallLine bottomLine" />
+                {/*}
                 <div
                     className="TimeTableBox"
                 >
-                    <button className="TimeTableButton unCheckedButton" />
+                    <CheckBox
+                        contents={contents} setContent={setContent}
+                        id={0} isChecked={String(timeIndex).includes(0)}
+                        timeIndex={timeIndex} setTimeIndex={setTimeIndex}
+                    />
                     <div
                         className="TimeTableWord"
                     >
                         가능한 시간이 없음
                     </div>
                 </div>
+                */}
             </div>
         );
 };

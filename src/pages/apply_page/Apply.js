@@ -28,38 +28,48 @@ import ApplyBanner from '../../layouts/applyBanner/ApplyBanner';
 import { Provider } from './ApplyForm/context/index'
 
 const Apply = () => {
+    // 처음인지 여부 알아와서 넣기
     const [isFirst, setIsFirst] = useState(true);
 
     // parameter page넣기
-    const [pages, setPage] = useState(3);
+    const [pages, setPage] = useState(1);
     // 0 -> LoginPage
     // 1 -> firstLogin
     // 2 -> SecondLogin
     // 3 -> ApplyForm
     // 4 -> ApplyComplete
 
+    // 초기값
     const [contents, setContent] = useState({
-        "interview_time_choice": [0, 1],
-        "name": "ss",
-        "semester": 1,
+        "interview_time_choice": [1],
+        "name": "",
+        "semester": 0,
         "phone": "01091894237",
         "introduce": "introduceSample",
         "motivate": "motivateSampel",
         "to_do": "todosample",
         "etc": "etcsmaple",
         "interview_requirement": "req sample",
-        "applicant": 0,
+        "applicant": 1,
     });
 
     const postContent = async () => {
+        console.log(contents);
+
         const response_data = await post_resume(contents);
 
-        console.log('postContent ' + response_data);
+        // 정상적으로 제출하지 않았을 경우 알람 나오게
+
+        console.log('postContent ' + response_data.detail);
     };
     const patchContent = async () => {
+        console.log(contents);
+
         const response_data = await update_resume(contents);
 
-        console.log('postContent ' + response_data);
+        // 정상적으로 제출하지 않았을 경우 알람 나오게
+
+        console.log('patchContent ' + response_data);
     };
 
     const uploadContent = () => {
@@ -70,6 +80,8 @@ const Apply = () => {
         else {
             patchContent();
         }
+
+        setPage(4);
     };
 
     switch (pages) {
