@@ -17,6 +17,7 @@ import Doc_result_pass from './pages/result_page/Doc_result_pass_page/Doc_result
 import In_result_fail  from './pages/result_page/Interview_result_fail_page/In_result_fail';
 import In_result_pass from './pages/result_page/Interview_result_pass_page/In_result_pass';
 import ApplyGuide from './pages/apply_page/applyGuide/ApplyGuide';
+import Not_allow_apply from 'pages/Not_allow_page/Not_allow_apply';
 
 
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="result/docpass" element={<Doc_result_pass/>} />
           <Route path="/result/interviewpass" element={<In_result_pass/>} />
           <Route path="/result/interviewfail" element={<In_result_fail/>} />
+          <Route path='/notallow' element={<Not_allow_apply/>} />
         </Route>
         <Route path='/applyGuide' element={<ApplyGuide />} />
       </Route>
