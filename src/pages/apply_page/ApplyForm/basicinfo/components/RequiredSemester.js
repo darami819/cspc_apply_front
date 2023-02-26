@@ -24,7 +24,6 @@ const RequiredSemester = ({ info, onChange }) => {
                         name="semester"
                         value={info}
                         onChange={onChange}
-                        placeholder='1'
                     >
                     </input>
                     학기

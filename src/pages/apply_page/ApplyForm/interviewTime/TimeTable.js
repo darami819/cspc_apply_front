@@ -17,6 +17,16 @@ const TimeTable = ({ contents, setContent }) => {
 
     // const timeIndex = contents.interview_time_choice;
 
+    const printTime = (time) => {
+        const hour = dateFormat(time, "h");
+        const endHour = Number(hour) + 1;
+        console.log(endHour);
+
+        return(
+            <>{dateFormat(time, "m월 dd일 오후 h시 ~ ") + endHour + "시"}</>
+        );
+    };
+
     if (isLoading) return "Loading...";
     if (error) return `Something went wrong: ${error.message}`;
     if (data)
@@ -37,7 +47,7 @@ const TimeTable = ({ contents, setContent }) => {
                         <div
                             className="TimeTableWord"
                         >
-                            {dateFormat(time.time, "m월 dd일 오후 h시 ~ ")}
+                            {printTime(time.time)}
                         </div>
                     </div>
                 ))}

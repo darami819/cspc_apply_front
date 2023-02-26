@@ -19,7 +19,7 @@ const Banner = () => {
             <Nav.Link href="/applyGuide" id='bannerletter'>지원안내</Nav.Link>
             </Nav.Item> 
             <Nav.Item>
-            <Nav.Link href="/apply" id='bannerletter'>지원하기</Nav.Link>
+            <Nav.Link href="/login" id='bannerletter'>지원하기</Nav.Link>
             </Nav.Item>   
           </Nav>     
           </Container>

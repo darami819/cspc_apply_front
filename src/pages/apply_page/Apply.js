@@ -55,18 +55,18 @@ const Apply = () => {
     // 초기값
 
     const [contents, setContent] = useState(
-        isFirst?
-        {
-        "interview_time_choice": [],
-        "name": "",
-        "semester": 0,
-        "phone": "",
-        "introduce": "",
-        "motivate": "",
-        "to_do": "",
-        "etc": "",
-        "interview_requirement": "",
-    }:data);
+        isFirst ?
+            {
+                "interview_time_choice": [],
+                "name": "",
+                "semester": 0,
+                "phone": "",
+                "introduce": "",
+                "motivate": "",
+                "to_do": "",
+                "etc": "",
+                "interview_requirement": "",
+            } : data);
 
     console.log(contents);
 
@@ -94,20 +94,34 @@ const Apply = () => {
         console.log('patchContent ' + response_data);
     };
 
+    const checkForm = () => {
+        if(contents.name == "" || contents.phone == "" || contents.semester == "" || contents.introduce == "" || contents.introduce == "" || contents.motivate == "" || contents.to_do == ""){
+            alert("필수 항목을 입력해주세요.");
+            return false;
+        }
+        if(contents.interview_time_choice == []){
+            alert('면접시간을 최소 하나 선택해주세요.\n가능하신 시간이 없으면 학회장에게 문의해주세요.');
+            return false;
+        }
+        return true;
+    }
+
     const uploadContent = () => {
-        console.log('upload')
-        if (isFirst) {
-            postContent();
-        }
-        else {
-            patchContent();
-        }
+        if (checkForm()) {
+            console.log('upload')
+            if (isFirst) {
+                postContent();
+            }
+            else {
+                patchContent();
+            }
 
-        // 제대로 제출되었을 때만 페이지 이동
-        // form check 
-        // -> 
+            // 제대로 제출되었을 때만 페이지 이동
+            // form check 
+            // -> 
 
-        setPage(4);
+            setPage(4);
+        }
     };
 
     switch (pages) {

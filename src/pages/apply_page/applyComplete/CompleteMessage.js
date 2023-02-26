@@ -1,8 +1,21 @@
 import React from 'react';
+import { useAsync } from 'react-async';
+
+import { get_recruit_info } from 'apis/get_recruit';
 
 import './CompleteMessage.css';
 
 const CompleteMessage = () => {
+    const { data, error, isLoading } = useAsync({ promiseFn: get_recruit_info }, []);
+
+
+    // 서류결과 시간 api콜
+    console.log(data);
+
+    if (isLoading) return "Loading...";
+    if (error) return `Something went wrong: ${error.message}`;
+    if (data)
+
     return (
         <div
             className="CompleteMessage"
