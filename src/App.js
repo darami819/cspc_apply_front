@@ -18,6 +18,8 @@ import In_result_fail  from './pages/result_page/Interview_result_fail_page/In_r
 import In_result_pass from './pages/result_page/Interview_result_pass_page/In_result_pass';
 import ApplyGuide from './pages/apply_page/applyGuide/ApplyGuide';
 import Not_allow_apply from 'pages/Not_allow_page/Not_allow_apply';
+import { MiddleResult } from 'pages/result_page/MiddleResult';
+import { FinalResult } from 'pages/result_page/FinalResult';
 
 
 const App = () => {
@@ -31,13 +33,12 @@ const App = () => {
         <Route path="/apply" element={<Apply />} />
         <Route path="/login" element={<Login/>}/>
         <Route element={<ApplyBanner />} >
-          <Route path="result/docfail" element={<Doc_result_fail/>} />
-          <Route path="result/docpass" element={<Doc_result_pass/>} />
-          <Route path="/result/interviewpass" element={<In_result_pass/>} />
-          <Route path="/result/interviewfail" element={<In_result_fail/>} />
-          <Route path='/notallow' element={<Not_allow_apply/>} />
+          <Route path='/notallow' element={<Not_allow_apply />} />
+          <Route path='/middle' element={<MiddleResult />} />
+          <Route path='/final' element={<FinalResult/>}/>
         </Route>
         <Route path='/applyGuide' element={<ApplyGuide />} />
+        
       </Route>
     </Routes>
   );

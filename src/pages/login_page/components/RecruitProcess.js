@@ -14,7 +14,7 @@ const RecruitProcess = ({recruit_data}) => {
 
                     <Container className={styles.banner_content}>
                         <div className={recruit_data.process === 'apply' ? styles.document_circle_process : styles.document_circle}>
-                            <Col className={styles.circle_content}><Row className="styles.process_text" >서류</Row><Row className={styles.date_text}
+                            <Col className={styles.circle_content}><Row className={styles.process_text} >서류</Row><Row className={styles.date_text}
                             >{dateFormat(recruit_data.start_time, format)} ~ {dateFormat(recruit_data.document_deadline,format)} 24시</Row></Col>
                             
                         </div>

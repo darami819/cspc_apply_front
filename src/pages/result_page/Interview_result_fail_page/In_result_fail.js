@@ -2,7 +2,7 @@ import React from 'react'
 import './In_result_fail.css';
 
 
-const In_result_fail = () =>{
+const In_result_fail = ({resume}) =>{
     return(
         <div className='black'>
             <div className='fail_resultbox'>
@@ -11,7 +11,7 @@ const In_result_fail = () =>{
             </div>
             <div className='fail_line'></div>
             <div className='fail_resultbox2'>
-                <div className='fail_resultlen2'>김피씨 님 아쉽지만, 모시지 못하게 되었습니다</div>
+                <div className='fail_resultlen2'>{resume.name} 님 아쉽지만, 모시지 못하게 되었습니다</div>
                 <div className='fail_resultlen3'>CSPC 신입 부원 모집에<br/>
                         최선을 다해 임해주셔서 정말 감사합니다.<br/>
                         이번 기회에는 아쉽지만 모시지 못하게 되었습니다.<br/><br/>

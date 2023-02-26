@@ -31,7 +31,7 @@
 
 .not_allowlen2{
     position: relative;
-    top: 198px;
+    top: 150px;
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
@@ -48,6 +48,13 @@
 }
 .button_{
     position: relative;
-    color: gray;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    text-decoration: underline;
+
+    color: #000000;
 
 }
