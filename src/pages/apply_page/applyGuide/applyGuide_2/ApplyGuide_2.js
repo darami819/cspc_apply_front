@@ -48,7 +48,7 @@ const ApplyGuide_2 = () => {
                 </div>
             </div>
         </div>
-        <Link to='/apply'>
+        <Link to='/login'>
                 <button className='ApplyButton' >
                     <div className='applyLetter'> 지원하기</div>
                 </button>

@@ -56,12 +56,14 @@ const Footer = () => {
           소개
         </div>
         </Link>
+        <Link to='/applyGuide'>
         <div
           className="footerWord applyHelp"
         >
           지원안내
         </div>
-        <Link to='/apply'>
+        </Link>
+        <Link to='/login'>
         <div
           className="footerWord apply"
         >

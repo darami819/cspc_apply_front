@@ -14,7 +14,7 @@ const GoToApply = ({ top, left }) => {
                 left: left,
             }}
         >
-            <Link to="/apply">
+            <Link to="/login">
                 <button
                     className="ButtonStyle"
                 >
