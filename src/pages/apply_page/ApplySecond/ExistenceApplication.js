@@ -1,10 +1,13 @@
 import React from 'react';
+import { useAsync } from 'react-async';
+import dateFormat, { masks } from "dateformat";
 
 import GoWriteApply from '../Components/GoWriteApply';
 
 import './ExistenceApplication.css';
 
-const ExistenceApplication = ({ setPage }) => {
+const ExistenceApplication = ({ setPage, updateTime }) => {
+    console.log(updateTime);
     return (
         <div
             className="ExistenceApplication"
@@ -18,7 +21,7 @@ const ExistenceApplication = ({ setPage }) => {
             <div
                 className="ExistenceApplication_2"
             >
-                2023.03.02 21:00에 저장된 지원서
+                {dateFormat(updateTime, "yyyy.mm.dd HH:MM에 저장된 지원서")}
             </div>
             <div
                 className="GoWriteApplyStyle"

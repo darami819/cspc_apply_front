@@ -19,7 +19,7 @@ export const get_resume = async () => {
 export const post_resume = async (data) => {
     let response = null
     try {
-        response = await Client.post('/apply/resume', get_auth_header())
+        response = await Client.post('/apply/resume', data, get_auth_header())
         return response.data
     } catch (err) {
         console.error("Error response:");
@@ -35,7 +35,7 @@ export const post_resume = async (data) => {
 export const update_resume = async (data) => {
     let response = null
     try {
-        response = await Client.patch('/apply/resume', get_auth_header())
+        response = await Client.patch('/apply/resume', data, get_auth_header())
         return response.data
     } catch (err) {
         console.error("Error response:");

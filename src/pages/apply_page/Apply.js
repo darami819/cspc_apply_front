@@ -1,6 +1,8 @@
 // Apply.js 에서 모든 Apply page관리
 import React from 'react';
 import { useState } from 'react';
+import { useAsync } from 'react-async';
+import { useLocation } from 'react-router-dom';
 
 import { post_resume, update_resume } from '../../apis/resume';
 
@@ -29,10 +31,21 @@ import { Provider } from './ApplyForm/context/index'
 
 const Apply = () => {
     // 처음인지 여부 알아와서 넣기
-    const [isFirst, setIsFirst] = useState(true);
+
+    const location = useLocation();
+    const data = location.state;
+
+    console.log(location);
+    console.log("data");
+    console.log(data);
+
+    const [isFirst, setIsFirst] = useState(data == null);
+
+    console.log("isFirst: " + isFirst);
+
 
     // parameter page넣기
-    const [pages, setPage] = useState(1);
+    const [pages, setPage] = useState(isFirst == true ? 1 : 2);
     // 0 -> LoginPage
     // 1 -> firstLogin
     // 2 -> SecondLogin
@@ -40,18 +53,22 @@ const Apply = () => {
     // 4 -> ApplyComplete
 
     // 초기값
-    const [contents, setContent] = useState({
-        "interview_time_choice": [1],
+
+    const [contents, setContent] = useState(
+        isFirst?
+        {
+        "interview_time_choice": [],
         "name": "",
         "semester": 0,
-        "phone": "01091894237",
-        "introduce": "introduceSample",
-        "motivate": "motivateSampel",
-        "to_do": "todosample",
-        "etc": "etcsmaple",
-        "interview_requirement": "req sample",
-        "applicant": 1,
-    });
+        "phone": "",
+        "introduce": "",
+        "motivate": "",
+        "to_do": "",
+        "etc": "",
+        "interview_requirement": "",
+    }:data);
+
+    console.log(contents);
 
     const postContent = async () => {
         console.log(contents);
@@ -65,6 +82,11 @@ const Apply = () => {
     const patchContent = async () => {
         console.log(contents);
 
+        const tempContent = contents;
+        delete tempContent.updated_at;
+
+        setContent(tempContent);
+
         const response_data = await update_resume(contents);
 
         // 정상적으로 제출하지 않았을 경우 알람 나오게
@@ -74,12 +96,16 @@ const Apply = () => {
 
     const uploadContent = () => {
         console.log('upload')
-        if(isFirst) {
+        if (isFirst) {
             postContent();
         }
         else {
             patchContent();
         }
+
+        // 제대로 제출되었을 때만 페이지 이동
+        // form check 
+        // -> 
 
         setPage(4);
     };
@@ -107,7 +133,7 @@ const Apply = () => {
                     <div
                         className="ApplyStyle"
                     >
-                        <ApplySecond setPage={setPage} />
+                        <ApplySecond setPage={setPage} updateTime={data.updated_at} />
                     </div>
                 </>
             );
@@ -118,7 +144,7 @@ const Apply = () => {
                     <div
                         className="ApplyStyle"
                     >
-                        <ApplyForm isFirst={isFirst} contents={contents} setContent={setContent} uploadContent={uploadContent}/>
+                        <ApplyForm isFirst={isFirst} contents={contents} setContent={setContent} uploadContent={uploadContent} />
                     </div>
                 </Provider>
             );
@@ -134,6 +160,7 @@ const Apply = () => {
                 </>
             );
     }
+
 };
 
 export default Apply;

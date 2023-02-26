@@ -9,6 +9,14 @@ import TimeTable from './TimeTable';
 import star from '../basicinfo/requiredInput.png';
 
 const InterviewTime = ({ contents, setContent, uploadContent }) => {
+    const onChange = (e) => {
+        const { value, name } = e.target;
+        setContent({
+            ...contents,
+            [name]: value
+        });
+    };
+
     return(
         <div
             className="InterviewTime"
@@ -60,6 +68,9 @@ const InterviewTime = ({ contents, setContent, uploadContent }) => {
                         면접 시간에 대한 요구사항이 있으시다면 적어주세요.
                     </div>
                     <input
+                        name="interview_requirement"
+                        value={contents.interview_requirement}
+                        onChange={onChange}
                         className="requirement"
                     />
                 </div>

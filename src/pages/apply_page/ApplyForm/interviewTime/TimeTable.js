@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useAsync } from 'react-async';
+import dateFormat, { masks } from "dateformat";
 
 import { interview } from '../../../../apis/interview';
 
@@ -36,7 +37,7 @@ const TimeTable = ({ contents, setContent }) => {
                         <div
                             className="TimeTableWord"
                         >
-                            {time.time}
+                            {dateFormat(time.time, "m월 dd일 오후 h시 ~ ")}
                         </div>
                     </div>
                 ))}
