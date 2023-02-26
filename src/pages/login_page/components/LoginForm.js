@@ -5,13 +5,13 @@ import { login } from 'apis/login';
 import { useAsync } from "react-async"
 import { useNavigate } from "react-router-dom";
 import { get_resume } from "apis/resume";
-
+import { get_result } from "apis/result";
 export const LoginForm = ({ state }) => {
     const id = useRef(null);
     const password = useRef(null);
     const navigate = useNavigate();
 
-    const Submit = async () => {
+    const Login = async () => {
         const id_temp = id.current.value;
         const pw_temp = password.current.value;
     
@@ -21,14 +21,29 @@ export const LoginForm = ({ state }) => {
             case 200: // 신규 지원자
                 sessionStorage.setItem('id', id_temp);
                 sessionStorage.setItem('pw', pw_temp);
-                navigate('/apply');
+                if (state == 'apply') {
+                    navigate('/apply');
+                }
+               
+                    
                 break;
             case 201: // 기존 지원자
                 sessionStorage.setItem('id', id_temp);
                 sessionStorage.setItem('pw', pw_temp);
-                const resume = await get_resume();
-                console.log(resume);
-                navigate('/apply',{state: resume});
+                if (state == 'apply') {
+                    const resume = await get_resume();
+                    console.log(resume);
+                    navigate('/apply', { state: resume });
+                }
+                else if (state == 'middle') {
+                    const result = await get_result();
+                    navigate('/middle', {state: {resume : result,state : state}})
+                }
+                    
+                else if (state == 'final') {
+                    const result = await get_result();
+                    navigate('/final', {state: {resume : result,state : state}})
+                }
                 break;
             case 404:
                 alert('로그인 항목을 채워주세요!')
@@ -57,7 +72,7 @@ export const LoginForm = ({ state }) => {
                         placeholder="비밀번호"
                         
                     />
-                    <Button className="apply_button" onClick={Submit}> {
+                    <Button variant="dark" className="apply_button" onClick={Login}> {
                         state === 'apply'
                             ?'지원서 작성하기' : state === 'middle'
                             ? '서류 결과 확인하기' : '최종 결과 확인하기'
