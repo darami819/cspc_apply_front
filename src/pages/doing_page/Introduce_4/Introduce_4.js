@@ -9,7 +9,7 @@ import imgParty from '../../doing_page/img/party.png';
 import imgDiscord from '../../doing_page/img/discord.png';
 import imgImsi from '../../doing_page/img/캡처.PNG';
 import imgSemina from '../../doing_page/img/semina.jpg';
-import imgFood from '../../doing_page/img/food.jpg';
+import imgFoood from '../../doing_page/img/foood.jpg';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Introduce_4 = () => {
@@ -24,7 +24,7 @@ const Introduce_4 = () => {
             </div>
 
             <div className='First num2'>
-                <img className='picture' src={imgFood} />
+                <img className='picture' src={imgFoood} />
                 <div className='name1'>회식</div>
                 <div className='detail1'>든든한 예산으로 맛있는 회식</div>
             </div>
