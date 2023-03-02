@@ -5,7 +5,7 @@ import { useAsync } from 'react-async';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { post_resume, update_resume } from '../../apis/resume';
-
+import NotFound from 'pages/NotFound';
 //// pages
 //Login
 import { Login } from '../login_page/Main';
@@ -28,11 +28,13 @@ import ApplyBanner from '../../layouts/applyBanner/ApplyBanner';
 
 // context
 import { Provider } from './ApplyForm/context/index'
+import { get_auth_header } from 'hooks/check_login';
 
 const Apply = () => {
     // 처음인지 여부 알아와서 넣기
 
     const navigate = useNavigate();
+    
 
     window.addEventListener('beforeunload', (event) => {
         // 표준에 따라 기본 동작 방지
@@ -134,7 +136,9 @@ const Apply = () => {
             setPage(4);
         }
     };
-
+    // 로그인안하고 접근 시 오류처리
+    if (get_auth_header() == null)
+        return <NotFound></NotFound>
     switch (pages) {
         case 0:
             return (

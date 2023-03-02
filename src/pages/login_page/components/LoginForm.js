@@ -51,6 +51,9 @@ export const LoginForm = ({ state }) => {
             case 500:
                 alert('로그인 실패')
                 break;
+            case 405:
+                alert('지원기간 외 아이디 생성은 불가능합니다')
+                break;
         }
     }
     return (<>

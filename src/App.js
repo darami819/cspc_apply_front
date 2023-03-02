@@ -17,13 +17,14 @@ import Not_allow_apply from 'pages/Not_allow_page/Not_allow_apply';
 import { MiddleResult } from 'pages/result_page/MiddleResult';
 import { FinalResult } from 'pages/result_page/FinalResult';
 import  ScrollToTop  from 'layouts/ScrollToTop';
+import NotFound from 'pages/NotFound';
 
 const App = () => {
   return (
       <ScrollToTop>
     <Routes>
      
-      <Route element={<MainLayout />}>
+      <Route element={<MainLayout />} errorElement={<NotFound></NotFound>}>
         
         <Route path="/" element={<Main />} />
         {/* 추가된 부분 */}
