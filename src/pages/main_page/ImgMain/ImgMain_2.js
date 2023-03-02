@@ -9,11 +9,82 @@ const ImgMain_2 = () => {
         <div
             className="main"
             style={{
+                height: '1005px',
+
                 textAlign: 'center',
                 position: 'relative',
+
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
             }}
         >
-            <img src={img_2} className="ImgMainStyle" />
+            <div
+                style={{
+                    position: 'relative',
+
+                    width: '1920px',
+                    height: '1005px',
+                    background: 'black',
+                }}
+            >
+                <div
+                    style={{
+                        position: 'relative',
+
+                        color: '#ffffff',
+
+                        fontWeight: 700,
+                        fontSize: '30px',
+                        lineHeight: '150%',
+                    }}
+                >
+                    <div
+                        className='WhiteWord'
+                        style={{
+                            position: 'absolute',
+
+                            top: '444px',
+                            left: '310px',
+                        }}
+                    >
+                        CSPCLAB은
+                    </div>
+                    <div
+                        className='BlueWord'
+                        style={{
+                            position: 'absolute',
+
+                            top: '494px',
+                            left: '310px',
+                        }}
+                    >
+                        소수정예
+                    </div>
+                    <div
+                        className='WhiteWord'
+                        style={{
+                            position: 'absolute',
+
+                            top: '494px',
+                            left: '430px',
+                        }}
+                    >
+                        를 지향하는
+                    </div>
+                    <div
+                        className='WhiteWord'
+                        style={{
+                            position: 'absolute',
+
+                            top: '544px',
+                            left: '310px',
+                        }}
+                    >
+                        서강대학교 컴퓨터공학과 학회입니다.
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

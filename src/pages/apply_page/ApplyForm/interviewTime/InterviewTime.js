@@ -35,7 +35,7 @@ const InterviewTime = ({ contents, setContent, uploadContent }) => {
                 <div
                     className="InterviewContent mainContent"
                 >
-                    면접은 비대면으로 진행됩니다. 장소 및 시간은 서류 결과 발표 시 확인하실 수 있습니다.
+                    면접은 대면으로 진행됩니다. 장소 및 시간은 서류 결과 발표 시 확인하실 수 있습니다.
                 </div>
             </div>
             <div

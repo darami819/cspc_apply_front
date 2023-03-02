@@ -53,7 +53,11 @@
     width: 315px;
     height: 0px;
 
-    border: 0.3px solid #000000;
+    border: 0.3px solid #d9d9d9;
+}
+
+.Line {
+    top: 35px;
 }
 
 .topLine {
