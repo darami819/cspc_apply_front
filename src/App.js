@@ -12,20 +12,20 @@ import Main from './pages/main_page/Main';
 import Apply from './pages/apply_page/Apply';
 import Introduce from './pages/doing_page/Introduce';
 import { Login } from './pages/login_page/Main';
-import Doc_result_fail from './pages/result_page/Doc_result_fail_page/Doc_result_fail';
-import Doc_result_pass from './pages/result_page/Doc_result_pass_page/Doc_result_pass';
-import In_result_fail  from './pages/result_page/Interview_result_fail_page/In_result_fail';
-import In_result_pass from './pages/result_page/Interview_result_pass_page/In_result_pass';
 import ApplyGuide from './pages/apply_page/applyGuide/ApplyGuide';
 import Not_allow_apply from 'pages/Not_allow_page/Not_allow_apply';
 import { MiddleResult } from 'pages/result_page/MiddleResult';
 import { FinalResult } from 'pages/result_page/FinalResult';
-
+import  ScrollToTop  from 'layouts/ScrollToTop';
+import NotFound from 'pages/NotFound';
 
 const App = () => {
   return (
+      <ScrollToTop>
     <Routes>
-      <Route element={<MainLayout />}>
+     
+      <Route element={<MainLayout />} errorElement={<NotFound></NotFound>}>
+        
         <Route path="/" element={<Main />} />
         {/* 추가된 부분 */}
         <Route path="/introduce" element={<Introduce />} />
@@ -38,9 +38,11 @@ const App = () => {
           <Route path='/final' element={<FinalResult/>}/>
         </Route>
         <Route path='/applyGuide' element={<ApplyGuide />} />
-        
-      </Route>
-    </Routes>
+      
+        </Route>
+          
+      </Routes>
+        </ScrollToTop>
   );
 };
 
