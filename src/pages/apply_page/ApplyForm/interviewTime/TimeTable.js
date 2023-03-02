@@ -22,7 +22,7 @@ const TimeTable = ({ contents, setContent }) => {
         const endHour = Number(hour) + 1;
         console.log(endHour);
 
-        return(
+        return (
             <>{dateFormat(time, "m월 dd일 오후 h시 ~ ") + endHour + "시"}</>
         );
     };
@@ -39,6 +39,11 @@ const TimeTable = ({ contents, setContent }) => {
                     <div
                         className="TimeTableBox"
                     >
+                        {time.id % 3 == 2 ?
+                            <div
+                                className="smallLine Line"
+                            />
+                            : null}
                         <CheckBox
                             contents={contents} setContent={setContent}
                             id={time.id} isChecked={String(timeIndex).includes(time.id)}
@@ -51,8 +56,6 @@ const TimeTable = ({ contents, setContent }) => {
                         </div>
                     </div>
                 ))}
-                <div className="smallLine topLine" />
-                <div className="smallLine bottomLine" />
                 {/*}
                 <div
                     className="TimeTableBox"

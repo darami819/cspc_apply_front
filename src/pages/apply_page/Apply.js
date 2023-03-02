@@ -1,9 +1,9 @@
 // Apply.js 에서 모든 Apply page관리
 import React from 'react';
-import { useState } from 'react';
+import { useState, Link } from 'react';
 import { useAsync } from 'react-async';
 import { useLocation } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
 import { post_resume, update_resume } from '../../apis/resume';
 
 //// pages
@@ -31,6 +31,17 @@ import { Provider } from './ApplyForm/context/index'
 
 const Apply = () => {
     // 처음인지 여부 알아와서 넣기
+
+    const navigate = useNavigate();
+
+    window.addEventListener('beforeunload', (event) => {
+        // 표준에 따라 기본 동작 방지
+        event.preventDefault();
+        // Chrome에서는 returnValue 설정이 필요함
+        event.returnValue = '';
+
+        navigate(`/login`);
+    });
 
     const location = useLocation();
     const data = location.state;
@@ -95,11 +106,11 @@ const Apply = () => {
     };
 
     const checkForm = () => {
-        if(contents.name == "" || contents.phone == "" || contents.semester == "" || contents.introduce == "" || contents.introduce == "" || contents.motivate == "" || contents.to_do == ""){
+        if (contents.name == "" || contents.phone == "" || contents.semester == "" || contents.introduce == "" || contents.introduce == "" || contents.motivate == "" || contents.to_do == "") {
             alert("필수 항목을 입력해주세요.");
             return false;
         }
-        if(contents.interview_time_choice == []){
+        if (contents.interview_time_choice == []) {
             alert('면접시간을 최소 하나 선택해주세요.\n가능하신 시간이 없으면 학회장에게 문의해주세요.');
             return false;
         }

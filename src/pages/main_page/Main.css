@@ -131,3 +131,19 @@
     
     border-radius: 10px;
 }
+
+.WhiteWord {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 150%;
+
+    color: #ffffff;
+}
+
+.BlueWord {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 150%;
+
+    color: #55A9BE;
+}

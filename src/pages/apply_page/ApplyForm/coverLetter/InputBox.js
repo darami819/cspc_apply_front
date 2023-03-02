@@ -4,12 +4,13 @@ import './InputBox.css';
 
 const InputBox = ({ info, setContent, onChange, title }) => {
     return(
-        <input
+        <textarea
+            id={title}
             className="InputBox"
             name={title}
             value={info}
             onChange={onChange}
-        ></input>
+        ></textarea>
     );
 };
 

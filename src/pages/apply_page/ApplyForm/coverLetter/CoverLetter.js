@@ -87,14 +87,14 @@ const CoverLetter = ({ contents={contents}, setContent={setContent} }) => {
                 className="CoverLetterBox"
             >
                 <div
-                    className="CoverLetterTitle lowerTitle"
+                    className="CoverLetterTitle lowerTitle_2"
                 >
                     다른 하시고 싶은 말씀이 있으시면 자유롭게 적어주세요.
+                    <img src={star} className="star"/>
                 </div>
                 <div
                     className="CoverLetterContent lowerContent"
                 >
-                    선택사항입니다.
                 </div>
                 <InputBox info={contents.etc} setContent={setContent} onChange={onChange} title="etc"/>
             </div>
