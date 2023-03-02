@@ -37,10 +37,8 @@ const Apply = () => {
     window.addEventListener('beforeunload', (event) => {
         // 표준에 따라 기본 동작 방지
         event.preventDefault();
+        navigate('/apply', {state: contents})
         // Chrome에서는 returnValue 설정이 필요함
-        event.returnValue = '';
-
-        navigate(`/login`);
     });
 
     const location = useLocation();
@@ -85,11 +83,8 @@ const Apply = () => {
         console.log(contents);
 
         const response_data = await post_resume(contents);
-
-        // 정상적으로 제출하지 않았을 경우 알람 나오게
-
-        console.log('postContent ' + response_data.detail);
     };
+
     const patchContent = async () => {
         console.log(contents);
 
@@ -99,10 +94,6 @@ const Apply = () => {
         setContent(tempContent);
 
         const response_data = await update_resume(contents);
-
-        // 정상적으로 제출하지 않았을 경우 알람 나오게
-
-        console.log('patchContent ' + response_data);
     };
 
     const checkForm = () => {
@@ -120,6 +111,7 @@ const Apply = () => {
     const uploadContent = () => {
         if (checkForm()) {
             console.log('upload')
+
             if (isFirst) {
                 postContent();
             }
