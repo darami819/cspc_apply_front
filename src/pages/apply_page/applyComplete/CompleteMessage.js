@@ -10,7 +10,6 @@ const CompleteMessage = () => {
 
 
     // 서류결과 시간 api콜
-    console.log(data);
 
     if (isLoading) return "Loading...";
     if (error) return `Something went wrong: ${error.message}`;

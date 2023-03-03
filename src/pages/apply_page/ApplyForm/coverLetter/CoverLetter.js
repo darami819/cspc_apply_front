@@ -12,8 +12,6 @@ const CoverLetter = ({ contents={contents}, setContent={setContent} }) => {
             ...contents,
             [name]: value
         });
-
-        console.log(contents.introduce);
     };
 
     return (
@@ -49,7 +47,7 @@ const CoverLetter = ({ contents={contents}, setContent={setContent} }) => {
                 >
                     관심분야, 취미, 특기, 성격, 경험 등 컴퓨터와 관련된 내용이 아니어도 됩니다. 200자 이상
                 </div>
-                <InputBox info={contents.introduce} setContent={setContent} onChange={onChange} title="introduce"/>
+                <InputBox info={contents.introduce} setContent={setContent} onChange={onChange} title="introduce" max={200}/>
             </div>
             <div
                 className="CoverLetterBox"
@@ -65,7 +63,7 @@ const CoverLetter = ({ contents={contents}, setContent={setContent} }) => {
                 >
                     100자 이상
                 </div>
-                <InputBox info={contents.motivate} setContent={setContent} onChange={onChange} title="motivate"/>
+                <InputBox info={contents.motivate} setContent={setContent} onChange={onChange} title="motivate" max={100}/>
             </div>
             <div
                 className="CoverLetterBox"
@@ -81,7 +79,7 @@ const CoverLetter = ({ contents={contents}, setContent={setContent} }) => {
                 >
                     50자 이상
                 </div>
-                <InputBox info={contents.to_do} setContent={setContent} onChange={onChange} title="to_do"/>
+                <InputBox info={contents.to_do} setContent={setContent} onChange={onChange} title="to_do" max={50}/>
             </div>
             <div
                 className="CoverLetterBox"

@@ -7,7 +7,6 @@ import GoWriteApply from '../Components/GoWriteApply';
 import './ExistenceApplication.css';
 
 const ExistenceApplication = ({ setPage, updateTime }) => {
-    console.log(updateTime);
     return (
         <div
             className="ExistenceApplication"

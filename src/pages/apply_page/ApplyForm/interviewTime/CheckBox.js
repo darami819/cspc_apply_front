@@ -4,11 +4,7 @@ import { useState } from 'react';
 import './TimeTable.css';
 
 const CheckBox = ({ contents, setContent, id, isChecked, timeIndex, setTimeIndex }) => {
-    console.log(isChecked);
-
     const changeChecked = ({ id }) => {
-        console.log(id + ": " + (isChecked===true));
-
         if (isChecked === true) {
             setTimeIndex(timeIndex.filter(index => index !== id));
             setContent({
@@ -18,16 +14,12 @@ const CheckBox = ({ contents, setContent, id, isChecked, timeIndex, setTimeIndex
 
         }
         else {
-            console.log(timeIndex);
-            console.log(contents.interview_time_choice);
             if ((contents.interview_time_choice).length === 0) {
                 setTimeIndex([id]);
                 setContent({
                     ...contents,
                     "interview_time_choice": [id]
                 });
-                console.log(timeIndex);
-                console.log(contents.interview_time_choice);
             }
             else {
                 setTimeIndex(new Array(...timeIndex, id));
@@ -38,10 +30,6 @@ const CheckBox = ({ contents, setContent, id, isChecked, timeIndex, setTimeIndex
             }
         }
         isChecked = !isChecked;
-
-        console.log(id + ": " + isChecked);
-        console.log("timeIndex: " + timeIndex);
-        console.log("contents: " + contents.interview_time_choice);
     };
 
 

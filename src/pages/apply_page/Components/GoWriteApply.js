@@ -12,7 +12,7 @@ const GoWriteApply = ({ isChecked, first, second, setPage }) => {
 
     const goWrite = () => {
         if(isChecked) {
-            console.log({setPage});
+            window.scrollTo(0, 0);
             setPage(3);
         }
     };

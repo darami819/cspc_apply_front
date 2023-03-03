@@ -20,7 +20,6 @@ const TimeTable = ({ contents, setContent }) => {
     const printTime = (time) => {
         const hour = dateFormat(time, "h");
         const endHour = Number(hour) + 1;
-        console.log(endHour);
 
         return (
             <>{dateFormat(time, "m월 dd일 오후 h시 ~ ") + endHour + "시"}</>
@@ -37,6 +36,7 @@ const TimeTable = ({ contents, setContent }) => {
             >
                 {data.map(time => (
                     <div
+                        key={time.id}
                         className="TimeTableBox"
                     >
                         {time.id % 3 == 2 ?

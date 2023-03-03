@@ -34,26 +34,19 @@ const Apply = () => {
     // 처음인지 여부 알아와서 넣기
 
     const navigate = useNavigate();
-    
+
 
     window.addEventListener('beforeunload', (event) => {
         // 표준에 따라 기본 동작 방지
         event.preventDefault();
-        navigate('/apply', {state: contents})
+        navigate('/apply', { state: contents })
         // Chrome에서는 returnValue 설정이 필요함
     });
 
     const location = useLocation();
     const data = location.state;
 
-    console.log(location);
-    console.log("data");
-    console.log(data);
-
     const [isFirst, setIsFirst] = useState(data == null);
-
-    console.log("isFirst: " + isFirst);
-
 
     // parameter page넣기
     const [pages, setPage] = useState(isFirst == true ? 1 : 2);
@@ -79,17 +72,11 @@ const Apply = () => {
                 "interview_requirement": "",
             } : data);
 
-    console.log(contents);
-
     const postContent = async () => {
-        console.log(contents);
-
         const response_data = await post_resume(contents);
     };
 
     const patchContent = async () => {
-        console.log(contents);
-
         const tempContent = contents;
         delete tempContent.updated_at;
 
@@ -107,13 +94,15 @@ const Apply = () => {
             alert('면접시간을 최소 하나 선택해주세요.\n가능하신 시간이 없으면 학회장에게 문의해주세요.');
             return false;
         }
+        if ((contents.introduce).length < 200 || (contents.motivate).length < 100 || (contents.to_do).length < 50) {
+            alert('글자 수가 부족합니다.');
+            return false;
+        }
         return true;
     }
 
     const uploadContent = () => {
         if (checkForm()) {
-            console.log('upload')
-
             if (isFirst) {
                 postContent();
             }
@@ -125,6 +114,7 @@ const Apply = () => {
             // form check 
             // -> 
 
+            window.scrollTo(0, 0);
             setPage(4);
         }
     };

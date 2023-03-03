@@ -21,6 +21,7 @@ const RequiredPhone = ({ info, onChange }) => {
                         name="phone"
                         value={info}
                         onChange={onChange}
+                        placeholder="010-xxxx-xxxx"
                     >
                     </input>
             </div>
