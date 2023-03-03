@@ -91,7 +91,7 @@ const Apply = () => {
         console.log("contents.interviewtime");
         console.log(contents.interview_time_choice);
 
-        if (contents.name == "" || contents.phone == "" || contents.semester == "" || contents.introduce == "" || contents.introduce == "" || contents.motivate == "" || contents.to_do == "") {
+        if (contents.name == "" || contents.phone == "" || contents.semester == "" || contents.introduce == "" || contents.motivate == "" || contents.to_do == "" || contents.etc == "" ) {
             alert("필수 항목을 입력해주세요.");
             return false;
         }
