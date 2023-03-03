@@ -39,7 +39,7 @@ const TimeTable = ({ contents, setContent }) => {
                         key={time.id}
                         className="TimeTableBox"
                     >
-                        {index % 3 == 2 ?
+                        {index % 3 == 2 && index != (data.length - 1) ?
                             <div
                                 className="smallLine Line"
                             />
