@@ -26,7 +26,7 @@ export const LoginForm = ({ state }) => {
 
     
         const [status_code, data] = await login(id_temp, pw_temp);
-        console.log(status_code, data);
+  
         switch (status_code) {
             case 200: // 신규 지원자
                 sessionStorage.setItem('id', id_temp);
@@ -42,7 +42,7 @@ export const LoginForm = ({ state }) => {
                 sessionStorage.setItem('pw', pw_temp);
                 if (state == 'apply') {
                     const resume = await get_resume();
-                    console.log(resume);
+
                     navigate('/apply', { state: resume });
                 }
                 else if (state == 'middle') {
@@ -59,7 +59,7 @@ export const LoginForm = ({ state }) => {
                 alert('로그인 항목을 채워주세요!')
                 break;
             case 500:
-                alert('로그인 실패')
+                alert('로그인 실패\n\n비밀번호를 분실한 경우 학회장에게 문의해주세요!')
                 break;
             case 405:
                 alert('지원기간 외 아이디 생성은 불가능합니다')
