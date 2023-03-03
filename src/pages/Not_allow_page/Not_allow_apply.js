@@ -3,6 +3,9 @@ import './Not_allow_apply.css';
 import { Link } from 'react-router-dom';
 import { useAsync } from 'react-async';
 import { get_master_info } from 'apis/master';
+import Confetti from 'react-confetti';
+
+
 const Not_allow_apply = () => {
     const { data, error, isLoading } = useAsync({ promiseFn: get_master_info });
 
@@ -11,6 +14,12 @@ const Not_allow_apply = () => {
     if (data) {
         return (
             <>
+                <Confetti
+                width={3840}
+                height={3000}
+                tweenDuration={50000}
+                numberOfPieces={1000}
+            />
                 <div className='introducebanner'>
                     <div className='bannerTitle'>지원안내</div>
                 </div>
