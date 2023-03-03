@@ -82,16 +82,11 @@ const Apply = () => {
 
         setContent(tempContent);
 
-        console.log(contents);
-
         const response_data = await update_resume(contents);
     };
 
     const checkForm = () => {
-        console.log("contents.interviewtime");
-        console.log(contents.interview_time_choice);
-
-        if (contents.name == "" || contents.phone == "" || contents.semester == "" || contents.introduce == "" || contents.motivate == "" || contents.to_do == "" || contents.etc == "" ) {
+        if (contents.name == "" || contents.semester == 0 ||contents.phone == "" || contents.semester == "" || contents.introduce == "" || contents.motivate == "" || contents.to_do == "" || contents.etc == "" ) {
             alert("필수 항목을 입력해주세요.");
             return false;
         }
@@ -110,11 +105,9 @@ const Apply = () => {
         if (checkForm()) {
             if (isFirst) {
                 postContent();
-                console.log(contents);
             }
             else {
                 patchContent();
-                console.log(contents);
             }
 
             // 제대로 제출되었을 때만 페이지 이동
