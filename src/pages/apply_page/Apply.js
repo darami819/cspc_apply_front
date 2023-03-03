@@ -82,15 +82,20 @@ const Apply = () => {
 
         setContent(tempContent);
 
+        console.log(contents);
+
         const response_data = await update_resume(contents);
     };
 
     const checkForm = () => {
+        console.log("contents.interviewtime");
+        console.log(contents.interview_time_choice);
+
         if (contents.name == "" || contents.phone == "" || contents.semester == "" || contents.introduce == "" || contents.introduce == "" || contents.motivate == "" || contents.to_do == "") {
             alert("필수 항목을 입력해주세요.");
             return false;
         }
-        if (contents.interview_time_choice == []) {
+        if ((contents.interview_time_choice).length == 0) {
             alert('면접시간을 최소 하나 선택해주세요.\n가능하신 시간이 없으면 학회장에게 문의해주세요.');
             return false;
         }
@@ -105,9 +110,11 @@ const Apply = () => {
         if (checkForm()) {
             if (isFirst) {
                 postContent();
+                console.log(contents);
             }
             else {
                 patchContent();
+                console.log(contents);
             }
 
             // 제대로 제출되었을 때만 페이지 이동
