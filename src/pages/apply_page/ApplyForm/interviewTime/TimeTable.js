@@ -26,8 +26,6 @@ const TimeTable = ({ contents, setContent }) => {
         );
     };
 
-    console.log(data);
-
     if (isLoading) return "Loading...";
     if (error) return `Something went wrong: ${error.message}`;
     if (data)
@@ -54,7 +52,7 @@ const TimeTable = ({ contents, setContent }) => {
                         <div
                             className="TimeTableWord"
                         >
-                            {printTime(time.time) + time.id}
+                            {printTime(time.time)}
                         </div>
                     </div>
                 ))}

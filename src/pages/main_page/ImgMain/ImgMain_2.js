@@ -67,7 +67,7 @@ const ImgMain_2 = () => {
                             position: 'absolute',
 
                             top: '494px',
-                            left: '430px',
+                            left: 'calc(310px + 120px)'
                         }}
                     >
                         를 지향하는
