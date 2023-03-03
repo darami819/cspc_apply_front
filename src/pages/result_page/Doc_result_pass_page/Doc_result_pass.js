@@ -5,7 +5,7 @@ import imgSpot from '../img/map-marker-Filled.png'
 import dateFormat, { masks } from "dateformat";
 
 const Doc_result_pass = ({ resume }) => {
-    const format = "m월 dd일 오후 hh시 mm분"
+    const format = "m월 dd일 오후 h시 MM분"
     return(
         <div className='black'>
             <div className='pass__resultbox'>

@@ -59,7 +59,7 @@ export const LoginForm = ({ state }) => {
                 alert('로그인 항목을 채워주세요!')
                 break;
             case 500:
-                alert('로그인 실패')
+                alert('로그인 실패\n\n비밀번호를 분실한 경우 학회장에게 문의해주세요!')
                 break;
             case 405:
                 alert('지원기간 외 아이디 생성은 불가능합니다')
