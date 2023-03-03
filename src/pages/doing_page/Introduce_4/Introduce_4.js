@@ -8,6 +8,7 @@ import imgDiscord from '../../doing_page/img/dic.png';
 import imgParty from '../../doing_page/img/party.png';
 import imgSemina from '../../doing_page/img/semina.jpg';
 import imgFoood from '../../doing_page/img/foood.jpg';
+import imgLogo from '../../doing_page/img/cspcLogo.png';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Introduce_4 = () => {
@@ -49,12 +50,12 @@ const Introduce_4 = () => {
             <div className='Second num3'>
                 <img className='picture' src={imgParty} />
                 <div className='name2'>크리스마스 파티</div>
-                <div className='detail2'>모든 CSPC 랩원이 함께 모여 이야기하는 크파</div>
+                <div className='detail2'>CSPC 선후배가 함께 모여 이야기하는 크파</div>
             </div>
 
 
             <div className='Third'>
-            <img className='picture' src={imgDiscord} />
+            <img className='picture' src={imgLogo} />
                 <div className='name3'>디스코드</div>
                 <div className='detail3'>심심하면 언제든 함께 만나는 디스코드</div>
             </div>
