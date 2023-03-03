@@ -8,7 +8,6 @@ import './CompleteMessage.css';
 const CompleteMessage = () => {
     const { data, error, isLoading } = useAsync({ promiseFn: get_recruit_info }, []);
 
-
     // 서류결과 시간 api콜
 
     if (isLoading) return "Loading...";
@@ -40,7 +39,7 @@ const CompleteMessage = () => {
             <div
                 className="CompleteContent"
             >
-                서류 결과 안내는 3월 11일 오후 6시에 문자로 안내됩니다.
+                서류 결과 안내는 3월 13일 오후 6시에 문자로 안내됩니다.
             </div>
         </div >
     );
