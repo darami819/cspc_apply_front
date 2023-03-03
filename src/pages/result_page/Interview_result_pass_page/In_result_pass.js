@@ -1,9 +1,37 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './In_result_pass.css';
+import Confetti from 'react-confetti';
 
 
 const In_result_pass = ({resume}) =>{
+    
+    const [windowSize, setWindowSize] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight
+    });
+
+    const handleResize = () => {
+        setWindowSize({
+            width: window.innerWidth,
+            height: window.innerHeight
+        });
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize',handleResize);
+        return() => {
+            window.removeEventListener('resize',handleResize);
+        }
+    },[]);
+
     return(
+        <>
+            <Confetti
+            width={windowSize.width}
+            height={windowSize.height}
+            tweenDuration={50000}
+            numberOfPieces={1000}
+            />        
         <div className='black'>
             <div className='pass_resultbox'>
                 <div className='pass_resultlen'>면접결과</div>
@@ -22,7 +50,7 @@ const In_result_pass = ({resume}) =>{
                     </div>
             </div>
         </div>
-
+        </>
     )
 
 }
