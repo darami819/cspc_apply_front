@@ -2,7 +2,6 @@ import { Col, Container, Form, Button } from "react-bootstrap";
 import { styles } from "./LoginForm.css";
 import { useRef } from 'react';
 import { login } from 'apis/login';
-import { useAsync } from "react-async"
 import { useNavigate } from "react-router-dom";
 import { get_resume } from "apis/resume";
 import { get_result } from "apis/result";
@@ -11,9 +10,20 @@ export const LoginForm = ({ state }) => {
     const password = useRef(null);
     const navigate = useNavigate();
 
-    const Login = async () => {
+    const Login = async (event) => {
         const id_temp = id.current.value;
         const pw_temp = password.current.value;
+        const id_regex = /\d{8}/;
+        if (!id_regex.test(id_temp)) {
+            alert("학번을 정확히 입력해주세요!");
+            return;
+        }
+        if (pw_temp.length < 8) {
+            alert('비밀번호를 8자리 이상 입력해주세요!');
+            return;
+        }
+     
+
     
         const [status_code, data] = await login(id_temp, pw_temp);
         console.log(status_code, data);
@@ -59,13 +69,13 @@ export const LoginForm = ({ state }) => {
     return (<>
         <Container>
             <Col>{info_text(state)}
-                <Form>
+                <Form >
                     <Form.Control
                         ref={id}
                         type="text"
                         className="login_input_box"
                         placeholder="학번 (20231600)"
-                       
+                        required
                     />
                     <Form.Control
                         ref={password}
@@ -73,6 +83,7 @@ export const LoginForm = ({ state }) => {
                         aria-describedby="passwordHelpBlock"
                         className="login_input_box"
                         placeholder="비밀번호"
+                        required
                         
                     />
                     <Button variant="dark" className="apply_button" onClick={Login}> {
