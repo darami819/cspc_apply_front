@@ -36,12 +36,12 @@ const TimeTable = ({ contents, setContent }) => {
             <div
                 className="TimeTable"
             >
-                {data.map(time => (
+                {data.map((time, index) => (
                     <div
                         key={time.id}
                         className="TimeTableBox"
                     >
-                        {time.id % 3 == 2 ?
+                        {index % 3 == 2 ?
                             <div
                                 className="smallLine Line"
                             />
