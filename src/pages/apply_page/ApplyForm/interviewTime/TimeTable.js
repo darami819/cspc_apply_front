@@ -54,7 +54,7 @@ const TimeTable = ({ contents, setContent }) => {
                         <div
                             className="TimeTableWord"
                         >
-                            {printTime(time.time) + time.id}
+                            {printTime(time.time)}
                         </div>
                     </div>
                 ))}

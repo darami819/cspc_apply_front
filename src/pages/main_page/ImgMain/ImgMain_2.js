@@ -51,26 +51,35 @@ const ImgMain_2 = () => {
                         CSPCLAB은
                     </div>
                     <div
-                        className='BlueWord'
                         style={{
                             position: 'absolute',
 
                             top: '494px',
                             left: '310px',
-                        }}
-                    >
-                        소수정예
-                    </div>
-                    <div
-                        className='WhiteWord'
-                        style={{
-                            position: 'absolute',
 
-                            top: '494px',
-                            left: '430px',
+                            width: 500,
+                            height: 50,
+
+                            display: 'flex',
+                            flexDirection: 'row',
                         }}
                     >
-                        를 지향하는
+                        <div
+                            className='BlueWord'
+                            style={{
+                                position: 'relative',
+                            }}
+                        >
+                            소수정예
+                        </div>
+                        <div
+                            className='WhiteWord'
+                            style={{
+                                position: 'relative',
+                            }}
+                        >
+                            를 지향하는
+                        </div>
                     </div>
                     <div
                         className='WhiteWord'

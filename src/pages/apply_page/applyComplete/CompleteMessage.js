@@ -3,11 +3,12 @@ import { useAsync } from 'react-async';
 
 import { get_recruit_info } from 'apis/get_recruit';
 
+import dateFormat, { masks } from "dateformat";
+
 import './CompleteMessage.css';
 
 const CompleteMessage = () => {
     const { data, error, isLoading } = useAsync({ promiseFn: get_recruit_info }, []);
-
 
     // 서류결과 시간 api콜
 
@@ -40,7 +41,13 @@ const CompleteMessage = () => {
             <div
                 className="CompleteContent"
             >
-                서류 결과 안내는 3월 11일 오후 6시에 문자로 안내됩니다.
+                {dateFormat(data.announce_final_time, "서류 결과 안내는 m월 dd일 오후 h시에 문자로 안내됩니다.")}
+            </div>
+            <br/><br/>
+            <div
+                className="CanCorrection"
+            >
+                지원기간 내에는 지원서를 수정할 수 있습니다.
             </div>
         </div >
     );
