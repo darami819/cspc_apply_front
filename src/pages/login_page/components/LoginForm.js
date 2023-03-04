@@ -9,6 +9,11 @@ export const LoginForm = ({ state }) => {
     const id = useRef(null);
     const password = useRef(null);
     const navigate = useNavigate();
+    const handleOnKeyPress = e => {
+        if (e.key === 'Enter') {
+            Login(); // Enter 입력이 되면 클릭 이벤트 실행
+        }
+    };
 
     const Login = async (event) => {
         const id_temp = id.current.value;
@@ -69,7 +74,7 @@ export const LoginForm = ({ state }) => {
     return (<>
         <Container>
             <Col>{info_text(state)}
-                <Form >
+                <Form onKeyDown={handleOnKeyPress}>
                     <Form.Control
                         ref={id}
                         type="text"
@@ -83,6 +88,7 @@ export const LoginForm = ({ state }) => {
                         aria-describedby="passwordHelpBlock"
                         className="login_input_box"
                         placeholder="비밀번호"
+                        
                         required
                         
                     />

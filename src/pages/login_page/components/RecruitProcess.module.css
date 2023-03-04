@@ -28,24 +28,26 @@
 }
 
 .document_circle {
-    background-color: rgba(85, 169, 190, 1);
+    background-color: rgb(136, 195, 210);
+    /* filter: brightness(1); */
     width: 235px;
     height: 235px;
     border-radius: 50%;
     display: flex;
 }
 .document_circle_process{
-    background-color: rgba(85, 169, 190, 1);
+    background-color: rgb(136, 195, 210);
+    /* filter: brightness(150%); */
     width: 235px;
     height: 235px;
     border: 5px solid black;
-    outline: 5px solid rgba(85, 169, 190, 1);
+    outline: 5px solid rgb(136, 195, 210);
     border-radius: 50%;
     display: flex;
 }
 
 .interview_circle {
-    background-color: rgba(85, 169, 190, 0.85);
+    background-color: rgb(111, 182, 200);
     width: 235px;
     height: 235px;
     border-radius: 50%;
@@ -53,28 +55,28 @@
        
 }
 .interview_circle_process {
-    background-color: rgba(85, 169, 190, 0.85);
+    background-color: rgb(111, 182, 200);
     width: 235px;
     height: 235px;
     border-radius: 50%;
     border: 5px solid black;
-    outline: 5px solid rgba(85, 169, 190, 0.85);
+    outline: 5px solid rgb(111, 182, 200);
     display: flex;
 }
 
 .join_circle{
-    background-color: rgba(85, 169, 190, 0.7);
+    background-color: rgba(85, 169, 190, 1);
     width: 235px;
     height: 235px;
     border-radius: 50%;
     display: flex;
 }
 .join_circle_process {
-    background-color: rgba(85, 169, 190, 0.7);
+    background-color: rgba(85, 169, 190, 1);
     width: 235px;
     height: 235px;
     border: 5px solid black;
-    outline: 5px solid rgba(85, 169, 190, 0.7);
+    outline: 5px solid rgba(85, 169, 190, 1);
     border-radius: 50%;
     display: flex;
 
