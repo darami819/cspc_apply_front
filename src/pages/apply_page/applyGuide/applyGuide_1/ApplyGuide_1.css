@@ -39,37 +39,56 @@
 .Line1{
     position: absolute;
     justify-content: space-between;
+
+    display: flex;
+    direction: column;
+
     top: 255px;
     left: 0px;
+
+    width: 100%;
+    height: 325px;
 }
 
 .Line1_1{
     box-sizing: border-box;
-    position: absolute;
+    position: relative;
     width: 325px;
     height: 325px;
     border: 1px solid #000000;
     border-radius: 10px;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 .Line1_2{
-    position: absolute;
+    position: relative;
     width: 325px;
     height: 325px;
     /*left: 487px;*/  
-    margin-left: 487px;  
+
     background: #000000;
     border-radius: 10px;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 .Line1_3{
     box-sizing: border-box;
-    position: absolute;
+    position: relative;
     width: 325px;
     height: 325px;
-    margin-left: 975px;
+
     border: 1px solid #000000;
     border-radius: 10px;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 .img1{
@@ -90,8 +109,7 @@
 
 
 .sen1{
-    position: absolute;
-    left: 38px;
+    position: relative;
     top: 245px;
     font-weight: 400;
     font-size: 18px;
@@ -100,38 +118,58 @@
 .white{
     color: white;
     text-align: center;
-    margin-left: 24px;
 }
 
 
 .Line2{
     position: absolute;
     justify-content: space-between;
+
+    display: flex;
+    direction: column;
+
+    position: absolute;
+    justify-content: space-between;
     left: 0px;
     top: 639px;
+
+    width: 100%;
+    height: 325px;
 }
 
 .Line2_1{
-    position: absolute;
+    position: relative;
     width: 325px;
     height: 325px;
     background: #000000;
     border-radius: 10px;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 .Line2_2{
     box-sizing: border-box;
-    position: absolute;
+    position: relative;
     width: 325px;
     height: 325px;
-    margin-left: 487px;
+
     border: 1px solid #000000;
     border-radius: 10px;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 .Line2_3{
-    position: absolute;
+    position: relative;
     width: 325px;
     height: 325px;
-    margin-left: 975px;
+
     background: #000000;
     border-radius: 10px;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }

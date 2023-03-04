@@ -44,8 +44,9 @@ const ApplyGuide_1 = () => {
                 <div className='sen1 white'>이걸 모두 읽고 있는 당신</div>
             </div>
         </div>
-        
+        {/*
         <div className='Line1 Line2'></div>
+  */}
     </div>
     </div>
   )
