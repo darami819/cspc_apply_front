@@ -41,7 +41,7 @@ const CompleteMessage = () => {
             <div
                 className="CompleteContent"
             >
-                {dateFormat(data.announce_middle_time, "서류 결과 안내는 m월 dd일 오후 h시에 문자로 안내됩니다.")}
+                {dateFormat(data.announce_middle_time, "서류 결과 안내는 m월 dd일 오후 h시 이후 홈페이지에서 알려드립니다.")}
             </div>
             <br/><br/>
             <div

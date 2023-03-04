@@ -15,6 +15,9 @@ const GoWriteApply = ({ isChecked, first, second, setPage }) => {
             window.scrollTo(0, 0);
             setPage(3);
         }
+        else {
+            alert("개인정보 수집 및 이용 동의가 필요합니다.");
+        }
     };
 
 
