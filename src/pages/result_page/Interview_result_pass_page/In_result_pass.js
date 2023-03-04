@@ -30,7 +30,7 @@ const In_result_pass = ({resume}) =>{
             width={windowSize.width}
             height={windowSize.height}
             tweenDuration={50000}
-            numberOfPieces={1000}
+            numberOfPieces={500}
             />        
         <div className='black'>
             <div className='pass_resultbox'>
